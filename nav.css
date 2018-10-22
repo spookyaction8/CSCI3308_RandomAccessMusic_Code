@@ -1,0 +1,20 @@
+/*
+Random Access Music
+Navbar style sheet
+*/
+
+#nav_ele {
+	border-right: solid white 2px;
+}
+
+#nav_search {
+
+	border-color: teal;
+	color: teal;
+}
+
+#nav_search:hover {
+
+	background-color: teal;
+	color: white;
+}

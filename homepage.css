@@ -8,3 +8,9 @@ Homepage CSS
 body {
 	background-color: #c0c1c4;
 }
+
+.carousel-inner img {
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+}

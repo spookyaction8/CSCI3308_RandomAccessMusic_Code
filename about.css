@@ -2,3 +2,26 @@
 Random Access Music
 About page CSS
 */
+
+body {
+	background-color: #c0c1c4;
+}
+
+#aboutDiv1 {
+	
+}
+
+#aboutDiv2 {
+	border-left: solid black 2px;
+
+}
+
+#aboutCol {
+
+	margin: 10px;
+}
+
+#searchButton {
+	background-color: teal; 
+	border: none;
+}

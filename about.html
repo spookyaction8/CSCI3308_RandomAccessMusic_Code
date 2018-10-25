@@ -11,14 +11,14 @@ About page HTML
 		<meta charset="utf-8">
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    	<link rel="stylesheet" href="homepage.css">
+    	<link rel="stylesheet" href="about.css">
     	<link rel="stylesheet" href="nav.css">
 		<title> Random Access Music: About </title>
 	</head>
 
 	<body>
 
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="color: grey;">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
 			<a class="navbar-brand" href="#" style="color: teal;"> Random Access Music</a>
 
@@ -30,6 +30,18 @@ About page HTML
       				<li class="nav-item active" id="nav_ele">
         				<a class="nav-link" href="about.html">About</a>
       				</li>
+      				<li class="nav-item dropdown">
+       		 			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Explore Music </a>
+        				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+         					<a class="dropdown-item" href="#">Rock</a>
+          					<a class="dropdown-item" href="#">Hip-Hop</a>
+          					<a class="dropdown-item" href="#">Country</a>
+          					<a class="dropdown-item" href="#">Classical</a>
+          					<a class="dropdown-item" href="#">Jazz</a>
+          					<div class="dropdown-divider"></div>
+          					<a class="dropdown-item" href="#">Random Song</a>
+        				</div>
+      				</li>
       			</ul>
       			<form class="form-inline my-2 my-lg-0">
       				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -39,31 +51,30 @@ About page HTML
 
 		</nav>
     	
-    	<div class="row">
-    		<div class="col-md-6" style="margin: 10px;">
-    			<h1> About Us </h1>
+    	<div class="row" id="aboutCol">
+    		<div class="col-md-6" id="aboutDiv1">
+    			<h1> Who Are We? </h1>
     			<p>Random Access Music is a clean and sleek music discovery and reviewing platform that allows users to discover new music and artists based off of other user ratings. Our goal is to have a user maintained website, where users can discover new songs based off of what other people are listening to. Our platform will include features such as verified critics, for users who are experienced with critiquing music. Additional features will include general user reviews, for any user who creates an account with the site and music will be rated on a five star system. Also, having a section for featured songs, albums, and artists of the week, and user-rated billboards. </p>
     		</div>
-    		<div class="col-md-6" style="margin: 10px;">
+    		<div class="col-md-6" id="aboutDiv2">
 
     			<h1> Any Concerns? Contact us. </h1>
     			<form>
 					<br>
 					<div class="form-group">
-						<label for="First and Last Name"> <b> NickName </b> </label>
-						<input type="text" class="form-control" id="NickName1" placeholder="Enter NickName">
+						<label for="First and Last Name"> <b> Name </b> </label>
+						<input type="text" class="form-control" id="name1" placeholder="Enter full name.">
 					</div>
-					<br>
 					<div class="form-group">
 						<label for="email1"> <b> Email address </b> </label>
-						<input type="email" class="form-control" id="email1" placeholder="Enter email">
+						<input type="email" class="form-control" id="email1" placeholder="Enter email.">
 					</div>
 					<div class="form-group">
-						<label for="NickName1"> <b> Message </b> </label>
-						<textarea class="form-control" rows="4"></textarea>
+						<label for="message1"> <b> Message </b> </label>
+						<textarea class="form-control" rows="4" placeholder="Enter some text here."></textarea>
 					</div>
 
-			 		<button type="submit" class="btn btn-primary" placeholder="Enter some text here." style="background-color: teal; border: none;"> Submit</button>
+			 		<button type="submit" class="btn btn-primary"  id="searchButton"> Submit</button>
 
 				</form>
 

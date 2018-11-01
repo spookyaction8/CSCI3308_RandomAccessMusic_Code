@@ -21,3 +21,7 @@ Navbar style sheet
 	background-color: teal;
 	color: white;
 }
+
+#navbarDropdown:hover {
+	 border-top: white solid 2px;
+}

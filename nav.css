@@ -5,9 +5,10 @@ Navbar style sheet
 
 */
 
-#nav_ele {
-	border-right: solid white 2px;
+#nav_ele:hover {
+	 border-top: white solid 2px;
 }
+
 
 #nav_search {
 

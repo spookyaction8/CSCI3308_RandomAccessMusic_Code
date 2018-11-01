@@ -11,9 +11,11 @@ About page HTML
 		<meta charset="utf-8">
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    	<link rel="stylesheet" href="about.css">
-    	<link rel="stylesheet" href="nav.css">
-		<title> Random Access Music: About </title>
+    	<link rel="stylesheet" href="writeReview.css">
+		<link rel="stylesheet" href="nav.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">b
+		<title> Random Access Music: New Review </title>
 	</head>
 
 	<body>
@@ -53,28 +55,34 @@ About page HTML
       		</div>
 
 		</nav>
-    	
-    	<div class="row" id="aboutCol">
-    		<div class="col-md-6" id="aboutDiv1">
-    			<h1> Who Are We? </h1>
-    			<p>Random Access Music is a clean and sleek music discovery and reviewing platform that allows users to discover new music and artists based off of other user ratings. Our goal is to have a user maintained website, where users can discover new songs based off of what other people are listening to. Our platform will include features such as verified critics, for users who are experienced with critiquing music. Additional features will include general user reviews, for any user who creates an account with the site and music will be rated on a five star system. Also, having a section for featured songs, albums, and artists of the week, and user-rated billboards. </p>
-    		</div>
-    		<div class="col-md-6" id="aboutDiv2">
-
-    			<h1> Any Concerns? Contact us. </h1>
+		<div class="col-5" id="review">
+    		<h2> Song not reviewed? Be the first to write one! </h2>
     			<form>
 					<br>
+					<!--<div class="form-group">
+						<label for="userName"> <b> Username </b> </label>
+						<input type="text" class="form-control" id="userName" placeholder="Enter Username.">
+					</div>-->
 					<div class="form-group">
-						<label for="First and Last Name"> <b> Name </b> </label>
-						<input type="text" class="form-control" id="name1" placeholder="Enter full name.">
+						<label for="Artist"> <b> Song Artist</b> </label>
+						<input type="text" class="form-control" id="Artist" placeholder="Enter song artist.">
 					</div>
 					<div class="form-group">
-						<label for="email1"> <b> Email address </b> </label>
-						<input type="email" class="form-control" id="email1" placeholder="Enter email.">
+						<label for="SongTitle"> <b> Song Title</b> </label>
+						<input type="email" class="form-control" id="Title" placeholder="Enter song title.">
 					</div>
 					<div class="form-group">
-						<label for="message1"> <b> Message </b> </label>
-						<textarea class="form-control" rows="4" placeholder="Enter some text here."></textarea>
+						<label for="Song album"> <b> Song Album</b> </label>
+						<input type="" class="form-control" id="email1" placeholder="Enter song Album.">
+					</div>
+					<label for="Rating"> <b> Rating out of 5 Stars</b> </label>
+					<div class="rating">
+						<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+					<br>
+					<div class="form-group">
+						<label for="Review"> <b> Review </b> </label>
+						<textarea class="form-control" rows="4" placeholder="Enter Review Here."></textarea>
 					</div>
 
 			 		<button type="submit" class="btn btn-primary"  id="searchButton"> Submit</button>
@@ -83,7 +91,7 @@ About page HTML
 
     		</div>
     	</div>
-    
+	</div>
 
 
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

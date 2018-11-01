@@ -1,0 +1,50 @@
+/*
+Random Access Music
+Write Review page CSS
+*/
+
+body {
+	background-color: #c0c1c4;
+}
+
+#aboutDiv1 {
+	margin-top:10px;
+}
+
+#aboutDiv2 {
+	border-left: solid black 2px;
+	margin-top: 10px;
+
+}
+
+#aboutCol {
+
+	margin: 10px;
+}
+
+#searchButton {
+	background-color: teal; 
+	border: none;
+}
+.rating {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	text-align: left;
+  }
+.rating > span {
+	display: inline-block;
+	position: relative;
+	width: 1.1em;
+  }
+.rating > span:hover,
+.rating > span:hover ~ span {
+	color: transparent;
+  }
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+	 content: "\2605";
+	 position: absolute;
+	 left: 0; 
+	 color: gold;
+  }
+  

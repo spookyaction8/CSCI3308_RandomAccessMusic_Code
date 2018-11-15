@@ -1,0 +1,7 @@
+CREATE TABLE REVIEWS(
+	SongID INT PRIMARY KEY NOT NULL;
+	UserID INT NOT NULL; 
+	rating INT NOT NULL;
+	textreview TEXT NOT NULL;
+	votes float(2) NOT NULL;
+);

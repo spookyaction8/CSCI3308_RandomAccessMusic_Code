@@ -25,3 +25,16 @@ Navbar style sheet
 #navbarDropdown:hover {
 	 border-top: white solid 2px;
 }
+
+#nav_login {
+
+	border-color: green;
+	color: green;
+	margin-left: 5px;
+}
+
+#nav_login:hover {
+
+	background-color: green;
+	color: white;
+}

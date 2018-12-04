@@ -1,7 +1,13 @@
 CREATE TABLE REVIEWS(
-	SongID INT PRIMARY KEY NOT NULL;
-	UserID INT NOT NULL; 
-	rating INT NOT NULL;
-	textreview TEXT NOT NULL;
-	votes float(2) NOT NULL;
+	SID SERIAL PRIMARY KEY NOT NULL,
+	UID INT,
+	rating INT,
+	textreview TEXT,
+	TotalVotes INT
 );
+
+UPDATE Reviews
+SET rating=0;
+
+UPDATE Reviews
+SET TotalVotes=0.00;

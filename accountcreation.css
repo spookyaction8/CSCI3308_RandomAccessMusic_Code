@@ -24,31 +24,36 @@ hr {
 }
 
 /* Set a style for all buttons */
-button {
+#login {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
     opacity: 0.9;
 }
 
-button:hover {
+#login:hover {
     opacity:1;
 }
 
-/* Extra styles for the cancel button */
-.cancelbtn {
+#cancel {
+    background-color: #ff0000;
+    color: white;
     padding: 14px 20px;
-    background-color: #f44336;
+    margin: 8px 0;
+    border: none;
+    float:left;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    text-align: center;
 }
 
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
+#cancel:hover {
+    opacity:1;
 }
 
 /* Add padding to container elements */

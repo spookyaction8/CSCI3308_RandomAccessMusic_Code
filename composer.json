@@ -3,11 +3,11 @@
         "monolog/monolog": "1.0.*"
     },
 
-    "scripts": {
+    /*"scripts": {
     	 "post-install-cmd": [
-     		"php clear-compiled",
-     		"php optimize",
+     		"php artisan clear-compiled",
+     		"php artisan optimize",
     		"chmod -R 777 public/"
  		]
-    }
+    }*/
 }

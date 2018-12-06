@@ -34,7 +34,7 @@ Homepage HTML
       				<li class="nav-item" id="nav_ele">
         				<a class="nav-link" href="charts.html">Charts</a>
       				</li>
-      				<li class="nav-item dropdown">
+      				<!-- <li class="nav-item dropdown">
        		 			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Explore Music </a>
         				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
          					<a class="dropdown-item" href="#">Rock</a>
@@ -45,7 +45,7 @@ Homepage HTML
           					<div class="dropdown-divider"></div>
           					<a class="dropdown-item" href="#">Random Song</a>
         				</div>
-      				</li>
+      				</li> -->
       			</ul>
       			<form class="form-inline my-2 my-lg-0">
       				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -121,9 +121,8 @@ Homepage HTML
               <a href="#" class="btn btn-primary">Artist Page</a>
             </div>
           </div> -->
-          <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3"
-width="300" height="500" frameborder="0" allowtransparency="true"
-allow="encrypted-media"></iframe>
+          <iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp" width="300" 
+		  height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           <div class="card">
             <img class="card-img-top" src="https://ssle.ulximg.com/image/750x750/cover/1535058703_68d9b79e806ab354d0c2de0d79b46f9c.jpg/bb723a52a426398ac385ac3a486815cc/1535058703_d1b09792ad3ef8313df22d20a1d131fc.jpg" alt="Lil Baby">
             <div class="card-body">

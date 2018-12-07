@@ -14,11 +14,11 @@
 
   <img src="finalrecord.gif" alt="gif" style="width:75px;height:75px;">
 
-      <a class="navbar-brand" href="homepage.php" style="color: yellow;"> Random Access Music </a>
+      <a class="navbar-brand" href="index.php" style="color: yellow;"> Random Access Music </a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active" id="nav_ele">
-              <a class="nav-link" href="homepage.php">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
             <li class="nav-item" id="nav_ele">
               <a class="nav-link" href="about.php">About</a>
@@ -70,7 +70,7 @@
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
     <div class="clearfix">
-      <a href="homepage.php" role="button" id="cancel" type="button" >Cancel</a>
+      <a href="index.php" role="button" id="cancel" type="button" >Cancel</a>
       <button id="login" type="submit" class="signupbtn">Sign Up</button>
     </div>
   </div>

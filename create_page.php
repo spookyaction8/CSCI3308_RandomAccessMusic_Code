@@ -10,6 +10,11 @@
 
 $conn = pg_connect(getenv("postgres://knimivntjnnyed:91034a3b107bde1899b64ab5f99f935bd4c9eedfdbb74d05435210fe5b0d170d@ec2-54-197-234-33.compute-1.amazonaws.com:5432/demmvp07u8rdvt"));
 
+if (!$conn) {
+  echo "An error occurred.\n";
+  exit;
+}
+
 $result = pg_query($conn, "SELECT * FROM accountdata WHERE ");
 
 echo $result;

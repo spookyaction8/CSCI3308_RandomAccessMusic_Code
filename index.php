@@ -19,9 +19,9 @@ index HTML
 	<body>
 
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    
+
     <img src="finalrecord.gif" alt="gif" style="width:75px;height:75px;">
-    
+
         <a class="navbar-brand" href="index.php" style="color: yellow;"> Random Access Music </a>
   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
     			<ul class="navbar-nav mr-auto">
@@ -51,7 +51,7 @@ index HTML
       				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="nav_search">Search
               </button>
-							<a href="login.php" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" id="nav_login">Log in</a>
+							<a href="accountcreation.php" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" id="nav_login">Create an Account</a>
    				 </form>
       		</div>
 
@@ -121,7 +121,7 @@ index HTML
               <a href="#" class="btn btn-primary">Artist Page</a>
             </div>
           </div> -->
-          <iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp" width="300" 
+          <iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp" width="300"
 		  height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           <div class="card">
             <img class="card-img-top" src="https://ssle.ulximg.com/image/750x750/cover/1535058703_68d9b79e806ab354d0c2de0d79b46f9c.jpg/bb723a52a426398ac385ac3a486815cc/1535058703_d1b09792ad3ef8313df22d20a1d131fc.jpg" alt="Lil Baby">

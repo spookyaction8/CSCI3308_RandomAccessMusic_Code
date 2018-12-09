@@ -1,4 +1,4 @@
-<!-- 
+<!--
 
 Random Access Music
 About page HTML
@@ -19,9 +19,9 @@ About page HTML
 	<body>
 
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    
+
     <img src="finalrecord.gif" alt="gif" style="width:75px;height:75px;">
-    
+
         <a class="navbar-brand" href="homepage.html" style="color: yellow;"> Random Access Music </a>
   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
     			<ul class="navbar-nav mr-auto">
@@ -51,7 +51,7 @@ About page HTML
       				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="nav_search">Search
               </button>
-							<a href="login.html" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" id="nav_login">Log in</a>
+							<a href="accountcreation.html" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" id="nav_login">Create an Account</a>
    				 </form>
       		</div>
 
@@ -67,7 +67,7 @@ $conn = new psql($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 $sql = "SELECT SongName.SONGDATA, SongArtist.SONGDATA, SongAlbum.SONGDATA, SongGenre.SONGDATA, rading.REVIEWS, textreviews.REVIEWS, FROM SONGDATA JOIN UserData JOIN REVIEWS WHERE SID.REVIEWS = SongID.SONGDATA ORDER BY TotalVotes.REVIEWS" ;
 
@@ -82,7 +82,7 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
-?> 
+?>
 <label for="rating"> <b> Rating</b></label>
            <div class="txt-center">
                 <form>
@@ -101,12 +101,12 @@ $conn->close();
                     </div>
                 </form>
             </div>
-            <br>       
+            <br>
             <div class="form-group">
               <label for="textreview"> <b> Review </b> </label>
-              
+
                 <textarea type="text" class="form-control" id="textreview" rows="4" placeholder="Enter Review Here." name = "textreview" value = "" required></textarea>
-          
+
             </div>
   </body>
 

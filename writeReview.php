@@ -1,4 +1,4 @@
-<!-- 
+<!--
 
 Random Access Music
 About page HTML
@@ -19,9 +19,9 @@ About page HTML
 	<body>
 
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    
+
     <img src="finalrecord.gif" alt="gif" style="width:75px;height:75px;">
-    
+
         <a class="navbar-brand" href="index.php" style="color: yellow;"> Random Access Music </a>
   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
     			<ul class="navbar-nav mr-auto">
@@ -51,7 +51,7 @@ About page HTML
       				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="nav_search">Search
               </button>
-							<a href="login.php" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" id="nav_login">Log in</a>
+							<a href="accountcreation.php" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" id="nav_login">Create an Account</a>
    				 </form>
       		</div>
 
@@ -64,19 +64,19 @@ About page HTML
   					<div class="form-group">
   						<label for="SongName"> <b> Song Title</b> </label>
   						<div class = "col-med-10">
-                <input type="text" class="form-control" id="SongName" name = "SongName" placeholder="Enter song name" value = "" required> 
+                <input type="text" class="form-control" id="SongName" name = "SongName" placeholder="Enter song name" value = "" required>
               </div>
   					</div>
             <div class="form-group">
               <label for="SongArtist"> <b> Song Artist</b></label>
               <div class = "col-med-10">
-                <input type="text" class="form-control" id="SongArtist" name = "SongArtist" placeholder="Enter song artist" value = "" required> 
+                <input type="text" class="form-control" id="SongArtist" name = "SongArtist" placeholder="Enter song artist" value = "" required>
               </div>
             </div>
             <div class="form-group">
               <label for="SongAlbum"><b> Song Album</b></label>
               <div class = "col-med-10">
-                <input type="text" class="form-control" id="SongAlbum" name = "SongAlbum" placeholder="Enter song album" value = "" required> 
+                <input type="text" class="form-control" id="SongAlbum" name = "SongAlbum" placeholder="Enter song album" value = "" required>
               </div>
             </div>
             <div class = "button">
@@ -114,12 +114,12 @@ About page HTML
                     </div>
                 </form>
             </div>
-            <br>       
+            <br>
             <div class="form-group">
               <label for="textreview"> <b> Review </b> </label>
-              
+
                 <textarea type="text" class="form-control" id="textreview" rows="4" placeholder="Enter Review Here." name = "textreview" value = "" required></textarea>
-          
+
             </div>
             <!-- <br>
             <div class="form-group">

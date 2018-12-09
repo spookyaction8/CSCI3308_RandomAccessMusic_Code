@@ -16,12 +16,14 @@
         exit;
       }
 
-      $pwd = $_GET['pwd'];
-      $uname = $_GET['uname'];
+      $pswd = $_GET['pwd'];
+      $usname = $_GET['uname'];
+      echo $pswd;
+      echo $usname;
 
-      $username = pg_query($conn,"SELECT username FROM accountdata WHERE username=$username");
+      $username = pg_query($conn,"SELECT username FROM accountdata WHERE username=$uname");
       echo $username;
-      $password = pg_query($conn,"SELECT userpassword FROM accountdata WHERE userpassword=$pwd");
+      $password = pg_query($conn,"SELECT userpassword FROM accountdata WHERE userpassword=$pswd");
       echo $password;
       /*if($_GET["uname"] == $username && $_GET["psw"] == $password){
         print "User: " . $username . "verified.<br>"

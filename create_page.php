@@ -15,7 +15,7 @@ $conn = pg_connect(getenv("DATABASE_URL"));
 $result = pg_query($conn, "SELECT * FROM accountdata WHERE ");
 
 echo $result;
-echo "<br>"
+echo "<br>";
 
 while ($row = pg_fetch_row($result)) {
   echo $row[0];

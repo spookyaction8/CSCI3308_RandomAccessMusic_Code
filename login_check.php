@@ -22,6 +22,7 @@
       //echo $usname;
 
       $query = "SELECT username FROM accountdata WHERE username=" + $usname;
+      echo $query;
       $username = pg_query($conn,$query);
       $row = pg_fetch_row($username);
       echo $row[0];

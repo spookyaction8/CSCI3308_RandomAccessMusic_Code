@@ -88,8 +88,8 @@ $rowSong = pg_fetch_row($resultSong);
 //echo "</h1>";
 
 ?>
-  
-  <h1> <?php  echo $rowSong[1]; ?></h1>
+
+  <h1> <?php  echo $rowSong[0]; ?></h1>
 
 
   </body>

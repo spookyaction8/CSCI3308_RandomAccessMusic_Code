@@ -40,7 +40,7 @@
         				</div>
       				</li> -->
       			</ul>
-
+            
       			<form class="form-inline my-2 my-lg-0">
       				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="nav_search">Search
@@ -50,9 +50,10 @@
       		</div>
 
 		</nav>
-		
-		<iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbMDoHDwVN2tF" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            
+
+    <div class="link">
+      <iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbMDoHDwVN2tF" marginwidth="500" width="1350" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -15,17 +15,17 @@
 
     <img src="finalrecord.gif" alt="gif" style="width:75px;height:75px;">
 
-        <a class="navbar-brand" href="homepage.html" style="color: yellow;"> Random Access Music </a>
+        <a class="navbar-brand" href="index.php" style="color: yellow;"> Random Access Music </a>
   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
     			<ul class="navbar-nav mr-auto">
       				<li class="nav-item active" id="nav_ele">
-        				<a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+        				<a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
      				</li>
       				<li class="nav-item" id="nav_ele">
-        				<a class="nav-link" href="about.html">About</a>
+        				<a class="nav-link" href="about.php">About</a>
       				</li>
       				<li class="nav-item" id="nav_ele">
-        				<a class="nav-link" href="charts.html">Charts</a>
+        				<a class="nav-link" href="charts.php">Charts</a>
       				</li>
       				<!-- <li class="nav-item dropdown">
        		 			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Explore Music </a>
@@ -44,7 +44,7 @@
       				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="nav_search">Search
               </button>
-							<a href="login.html" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" id="nav_login">Log in</a>
+							<a href="login.php" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" id="nav_login">Log in</a>
    				 </form>
       		</div>
 
@@ -65,7 +65,7 @@
         </label>
       </div>
       <div class="container" style="margin-top:75px;background-color:#f1f1f1;width:474px;height:75px;">
-        <a href="accountcreation.html" class="btn btn-info" role="button">Create Account</a>
+        <a href="accountcreation.php" class="btn btn-info" role="button">Create Account</a>
         <span class="psw"><a href="#">Forgot password?</a></span>
       </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

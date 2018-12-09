@@ -70,24 +70,29 @@ if (!$conn) {
   exit;
 }
 $search = $_GET['search'];
-$query = "SELECT SongName,SongArtist,SongAlbum,AvgRating,SongID,SongGenre from songdata where songName='". $search . "'";
+$query = "SELECT SongName,SongArtist,SongAlbum,AvgRating,SongID,SongGenre FROM songdata WHERE songName='". $search . "'";
 $resultSong = pg_query($conn,$query);
 if (!$resultSong) {
   echo "An error occurred.\n";
   exit;
 }
-$query2 = "SELECT SID, rating, textreview from reviews where SID='$resultSong[4]'";
-$resultReview = pg_query($conn,$query2);
+//$query2 = "SELECT SID, rating, textreview from reviews where SID='$resultSong[4]'";
+//$resultReview = pg_query($conn,$query2);
 $rowSong = pg_fetch_row($resultSong);
-$rowReview = pg_fetch_row($resultReview);
+//$rowReview = pg_fetch_row($resultReview);
 
-$conn->close();
+//$conn->close();
 
-echo "<h1>";
-echo "STUPID HEAD";
-echo "</h1>";
+//echo "<h1>";
+//echo "STUPID HEAD";
+//echo "</h1>";
 
 ?>
+  
+  <h1> <?php  echo $rowSong[1]; ?></h1>
+
+
+  </body>
 
   </body>
 

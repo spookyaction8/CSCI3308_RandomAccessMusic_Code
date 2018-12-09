@@ -40,6 +40,9 @@
         				</div>
       				</li> -->
       			</ul>
+
+            <iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbMDoHDwVN2tF" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            
       			<form class="form-inline my-2 my-lg-0">
       				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="nav_search">Search

@@ -51,8 +51,9 @@
 
 		</nav>
 
-    <div class="link">
-      <iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbMDoHDwVN2tF" marginwidth="500" width="1350" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <div class="link" style="overflow: hidden;">
+    <iframe src="https://spotifycharts.com/regional/" width=100% height="450" frameBorder="0">
+    </iframe>
   </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

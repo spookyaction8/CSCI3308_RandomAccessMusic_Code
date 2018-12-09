@@ -22,8 +22,9 @@
       //echo $usname;
 
       $username = pg_query($conn,"SELECT username FROM accountdata WHERE username=$usname");
-      echo $username;
-      $password = pg_query($conn,"SELECT userpassword FROM accountdata WHERE userpassword=$pswd");
+      $row = pg_fetch_row($username);
+      echo $row[0];
+      //$password = pg_query($conn,"SELECT userpassword FROM accountdata WHERE userpassword=$pswd");
       echo $password;
       /*if($_GET["uname"] == $username && $_GET["psw"] == $password){
         print "User: " . $username . "verified.<br>"

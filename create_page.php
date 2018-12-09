@@ -7,7 +7,7 @@
 <body>
 
 <?php
-echo "hey"
+print "hey";
 ?>
 
 </body>

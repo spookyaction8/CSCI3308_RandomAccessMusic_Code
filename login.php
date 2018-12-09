@@ -49,6 +49,7 @@
       		</div>
 
 		</nav>
+		<form action="/login-check.php">
     <h2 style="text-align:center;padding-top:50px;">Log In</h2>
 
 
@@ -60,10 +61,8 @@
         <input type="password" placeholder="Enter Password" name="psw" required>
 
         <button id="login" type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
       </div>
+		</form>
       <div class="container" style="margin-top:75px;background-color:#f1f1f1;width:474px;height:75px;">
         <a href="accountcreation.php" class="btn btn-info" role="button">Create Account</a>
         <span class="psw"><a href="#">Forgot password?</a></span>

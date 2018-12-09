@@ -5,11 +5,14 @@
  LALALALALALALA
 </head>
 <body>
-
+<br>
 <?php
-print $_POST['email'];
-print $_POST['psw'];
-print $_POST['psw-repeat'];
+print $_GET['email'];
+print "<br>";
+print $_GET['psw'];
+print "<br>";
+print $_GET['psw-repeat'];
+print "<br>";
 ?>
 
 </body>

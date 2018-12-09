@@ -79,15 +79,20 @@ if (!$resultSong) {
 //$query2 = "SELECT SID, rating, textreview from reviews where SID='$resultSong[4]'";
 //$resultReview = pg_query($conn,$query2);
 $rowSong = pg_fetch_row($resultSong);
-$rowReview = pg_fetch_row($resultReview);
+//$rowReview = pg_fetch_row($resultReview);
 
 //$conn->close();
 
-echo "<h1>";
-echo "STUPID HEAD";
-echo "</h1>";
+//echo "<h1>";
+//echo "STUPID HEAD";
+//echo "</h1>";
 
 ?>
+  
+  <h1> <?php  echo $rowSong[0]; ?></h1>
+
+
+  </body>
 
   </body>
 

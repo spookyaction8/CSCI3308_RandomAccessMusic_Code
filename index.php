@@ -48,7 +48,7 @@ index HTML
       				</li> -->
       			</ul>
       			<form action="/songPage.php" class="form-inline my-2 my-lg-0">
-      				<input class="form-control mr-sm-2" type="search" placeholder="Search for a song" aria-label="Search">
+      				<input class="form-control mr-sm-2" type="search" placeholder="Search for a song" aria-label="Search" name="search">
       				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="nav_search">Search
               </button>
 							<a href="accountcreation.php" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" id="nav_login">Create an Account</a>

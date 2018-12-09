@@ -78,8 +78,13 @@ $rowSong = pg_fetch_row($resultSong);
 $rowReview = pg_fetch_row($resultReview);
 
 $conn->close();
+
+echo "<h1>";
+echo $rowSong[0];
+echo "</h1>";
+
 ?>
-<h1><?php $rowSong[0] ?></h1>
+
   </body>
 
 

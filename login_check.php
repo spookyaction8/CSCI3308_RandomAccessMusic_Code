@@ -21,7 +21,8 @@
       //echo $pswd;
       //echo $usname;
 
-      $username = pg_query($conn,"SELECT username FROM accountdata WHERE username=$usname");
+      $query = "SELECT username FROM accountdata WHERE username=" + $usname;
+      $username = pg_query($conn,$query);
       $row = pg_fetch_row($username);
       echo $row[0];
       //$password = pg_query($conn,"SELECT userpassword FROM accountdata WHERE userpassword=$pswd");

@@ -84,7 +84,7 @@ $rowReview = pg_fetch_row($resultReview);
 $conn->close();
 
 echo "<h1>";
-echo $rowSong[0];
+echo "STUPID HEAD";
 echo "</h1>";
 
 ?>

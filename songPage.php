@@ -63,51 +63,22 @@ $password = "password";
 $dbname = "myDB";
 
 // Create connection
-$conn = new psql($servername, $username, $password, $dbname);
+$conn = pg_connect(getenv("DATABASE_URL"));
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$conn) {
+	echo "An error occurred.\n";
+  exit;
 }
-
-$sql = "SELECT SongName.SONGDATA, SongArtist.SONGDATA, SongAlbum.SONGDATA, SongGenre.SONGDATA, rading.REVIEWS, textreviews.REVIEWS, FROM SONGDATA JOIN UserData JOIN REVIEWS WHERE SID.REVIEWS = SongID.SONGDATA ORDER BY TotalVotes.REVIEWS" ;
-
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo " Song Name: ". $row["SongName.SONGDATA"]. " Artist: " . $row["SongArtist.SONGDATA"]. " " . $row["SongAlbum.SONGDATA"]. "<br>" " Genre: " . $row["SongGenre.SONGDATA"]. " Rating: " . $row["rading.REVIEWS"]. " Reviews: " . $row["textreviews.REVIEWS"].;
-} else {
-    echo "0 results";
-}
+$search = $_GET['search'];
+$query = "SELECT SongName,SongArtist,SongAlbum,AvgRating,SongID,SongGenre from songdata where songName='" . $search . "'";
+$resultSong = pg_query($conn,$query);
+$query2 = "SELECT SID, rating, textreview from reviews where SID='$resultSong[4]'";
+$resultReview = pg_query($conn,$query2);
+$rowSong = pg_fetch_row($resultSong);
+$rowReview = pg_fetch_row($resultReview);
 
 $conn->close();
 ?>
-<label for="rating"> <b> Rating</b></label>
-           <div class="txt-center">
-                <form>
-                    <div class="rating">
-                        <input id="star5" name="star" type="radio" value="5" class="radio-btn hide" />
-                        <label for="star5">☆</label>
-                        <input id="star4" name="star" type="radio" value="4" class="radio-btn hide" />
-                        <label for="star4">☆</label>
-                        <input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
-                        <label for="star3">☆</label>
-                        <input id="star2" name="star" type="radio" value="2" class="radio-btn hide" />
-                        <label for="star2">☆</label>
-                        <input id="star1" name="star" type="radio" value="1" class="radio-btn hide" />
-                        <label for="star1">☆</label>
-                        <div class="clear"></div>
-                    </div>
-                </form>
-            </div>
-            <br>
-            <div class="form-group">
-              <label for="textreview"> <b> Review </b> </label>
-
-                <textarea type="text" class="form-control" id="textreview" rows="4" placeholder="Enter Review Here." name = "textreview" value = "" required></textarea>
-
-            </div>
   </body>
 
 

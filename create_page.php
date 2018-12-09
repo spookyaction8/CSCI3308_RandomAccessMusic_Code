@@ -17,8 +17,13 @@ $result = pg_query($conn, "SELECT * FROM accountdata WHERE ");
 echo $result;
 echo "<br>";
 
+if (!$result) {
+  echo "An error occurred.\n";
+  exit;
+}
+
 while ($row = pg_fetch_row($result)) {
-  echo $row[0];
+  echo "$row[0]";
   echo "<br>";
 }
 

@@ -24,8 +24,8 @@
       $query = "SELECT username FROM accountdata WHERE username='" . $usname . "'";
       echo $query;
       $username = pg_query($conn,$query);
-      $row = pg_fetch_row($username);
-      echo $row[0];
+      //$row = pg_fetch_row($username);
+      echo $username;
       //$password = pg_query($conn,"SELECT userpassword FROM accountdata WHERE userpassword=$pswd");
       echo $password;
       /*if($_GET["uname"] == $username && $_GET["psw"] == $password){

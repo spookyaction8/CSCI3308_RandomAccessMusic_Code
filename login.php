@@ -49,10 +49,10 @@
       		</div>
 
 		</nav>
-		<form action="/login_check.php">
+		
     <h2 style="text-align:center;padding-top:50px;">Log In</h2>
 
-
+    <form action="/login_check.php">
       <div class="container" style="width:500px;height:250px;margin:auto;">
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required>

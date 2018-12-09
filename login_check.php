@@ -16,12 +16,12 @@
         exit;
       }
 
-      $pswd = $_GET['pwd'];
+      $pswd = $_GET['psw'];
       $usname = $_GET['uname'];
-      echo $pswd;
-      echo $usname;
+      //echo $pswd;
+      //echo $usname;
 
-      $username = pg_query($conn,"SELECT username FROM accountdata WHERE username=$uname");
+      $username = pg_query($conn,"SELECT username FROM accountdata WHERE username=$usname");
       echo $username;
       $password = pg_query($conn,"SELECT userpassword FROM accountdata WHERE userpassword=$pswd");
       echo $password;

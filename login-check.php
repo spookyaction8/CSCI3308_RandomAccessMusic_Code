@@ -1,5 +1,6 @@
 <!doctype HTML>
 <html>
+
   <body>
    
     <?php
@@ -15,7 +16,7 @@
 
       $username = pg_query($conn,"SELECT username FROM accountdata WHERE username=$username");
       echo $username;
-      $password = pg_query($conn,"SELECT userpassword FROM accountdata WHERE password=$pwd");
+      $password = pg_query($conn,"SELECT userpassword FROM accountdata WHERE userpassword=$pwd");
       echo $password;
       /*if($_GET["uname"] == $username && $_GET["psw"] == $password){
         print "User: " . $username . "verified.<br>"

@@ -5,7 +5,7 @@
       $conn = pg_connect(getenv("DATABASE_URL");
 
       if(!$conn){
-        echo "An error has occured.\n"
+        echo "An error has occured.\n";
         exit;
       }
 

@@ -56,10 +56,10 @@ About page HTML
       		</div>
 
 		</nav>
-    <h2 style="text-align:center;padding-top:10px;"> Song not reviewed?</h2>
-    <h3 style="text-align:center;padding-top:10px;"> Be the first to write one!</h3>
+    <h2 style="text-align:center;padding-top:10px;"> Review *specific* song!</h2>
+    
 		<div class="container" style="width:500px;height:250px;margin:auto;">
-          <br>
+          <!-- <br>
     			<form class = "form-horizontal" role ="form" style = "width: 100%">
   					<div class="form-group">
   						<label for="SongName"> <b> Song Title</b> </label>
@@ -95,7 +95,7 @@ About page HTML
                 <option value = "Rap">Rap</option>
               </select>
             </div>
-            <br>
+            <br> -->
             <label for="rating"> <b> Rating</b></label>
            <div class="txt-center">
                 <form>
@@ -121,13 +121,13 @@ About page HTML
                 <textarea type="text" class="form-control" id="textreview" rows="4" placeholder="Enter Review Here." name = "textreview" value = "" required></textarea>
 
             </div>
-            <!-- <br>
+            <br>
             <div class="form-group">
               <label for="userName"> <b> Username </b> </label>
               <input type="text" class="form-control-sm" id="userName" placeholder="Enter Username">
               <label for="password"> <b> Password </b> </label>
               <input type="text" class="form-control-sm" id="password" placeholder="Enter Password">
-  					</div> -->
+  					</div>
 
   			 		<button type="submit" class="btn btn-primary"  id="searchButton"> Submit</button>
 

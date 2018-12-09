@@ -5,6 +5,18 @@
  LALALALALALALA
 </head>
 <body>
+
+<?php
+$db = parse_url(getenv("DATABASE_URL"));
+$db["path"] = ltrim($db["path"], "/");
+
+$conn = pg_connect(getenv("DATABASE_URL"));
+
+$result = pg_query($conn, "SELECT * FROM accountdata");
+
+echo $result;
+
+?>
 <br>
 <?php
 print $_GET['email'];

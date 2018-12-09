@@ -65,24 +65,24 @@ About page HTML
     		<div class="col-md-6" id="aboutDiv2">
 
     			<h1> Any Concerns? Contact us. </h1>
-    			<form>
-					<br>
-					<div class="form-group">
-						<label for="First and Last Name"> <b> Name </b> </label>
-						<input type="text" class="form-control" id="name1" placeholder="Enter full name.">
-					</div>
-					<div class="form-group">
-						<label for="email1"> <b> Email address </b> </label>
-						<input type="email" class="form-control" id="email1" placeholder="Enter email.">
-					</div>
-					<div class="form-group">
-						<label for="message1"> <b> Message </b> </label>
-						<textarea class="form-control" rows="4" placeholder="Enter some text here."></textarea>
-					</div>
+    			<form action="mailto:sanaazer13@gmail.com" method="post" enctype="text/plain">
+                    <br>
+                    <div class="form-group">
+                        <label for="First and Last Name"> <b> Name </b> </label>
+                        <input type="text" name="First and Last Name" class="form-control" id="name1" placeholder="Enter full name.">
+                    </div>
+                    <div class="form-group">
+                        <label for="email1"> <b> Email address </b> </label>
+                        <input type="email" name="Email" class="form-control" id="email1" placeholder="Enter email.">
+                    </div>
+                    <div class="form-group">
+                        <label for="message1"> <b> Message </b> </label>
+                        <textarea class="form-control" name="Comment" rows="4" placeholder="Enter some text here."></textarea>
+                    </div>
 
-			 		<button type="submit" class="btn btn-primary"  id="searchButton"> Submit</button>
+                    <button type="submit" class="btn btn-primary"  id="searchButton"> Submit</button>
 
-				</form>
+                </form>
 
     		</div>
     	</div>

@@ -60,7 +60,7 @@ $row = pg_fetch_row($username_result);
 
 echo $row;
 echo "<br>";
-echo $username;
+echo $username_result;
 echo "<br>";
 
 if (!$username_result) {

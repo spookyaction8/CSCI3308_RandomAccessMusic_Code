@@ -60,7 +60,7 @@ $row = pg_fetch_row($username_result);
 
 echo $row[0];
 
-if (!$result) {
+if (!$username_result) {
   echo "An error occurred.\n";
   exit;
 }

@@ -75,7 +75,7 @@ $rowSong = pg_fetch_row($resultSong);
 
 ?>
 
-	<h1><?php $rowSong[0] ?></h1>
+	<h1><?php echo $rowSong[0]; ?></h1>
 	
 		
 

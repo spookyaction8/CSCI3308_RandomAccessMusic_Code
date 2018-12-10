@@ -40,8 +40,16 @@
     </nav>
 
       <div class="link" style="overflow: hidden;">
-    <iframe src="https://spotifycharts.com/regional/" width=100% height="450" frameBorder="0">
-    </iframe>
+        <div class="row">
+          <div class="col-md-6">
+            <iframe src="https://spotifycharts.com/regional/" width=100% height="450" frameBorder="0">
+            </iframe>
+          <div class="col-md-6">
+            <iframe src="https://spotifycharts.com/regional/" width=100% height="450" frameBorder="0">
+            </iframe>
+          </div>
+        </div>
+
   </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

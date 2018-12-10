@@ -76,11 +76,13 @@ $rowReview = pg_fetch_row($resultReview);
 ?>
 	<div class="container">
 		<br><br>
-		<h1 style="text-align:center;"><?php echo $rowSong[0]; ?></h1>
+		<h1><?php echo $rowSong[0]; ?></h1>
 			<br>
-			<h1 style="text-align:center;"><i><?php echo $rowSong[1]; ?></h1>
+			<h1><i><?php echo $rowSong[1]; ?></h1>
 			<br>
-			<h1 style="text-align:center;"><b><?php echo $rowSong[2]; ?></h1>
+			<h1><b><?php echo $rowSong[2]; ?></h1>
+			<h1><b>Average review score: </b><?php echo $rowSong[3]; ?> /5</h1>
+
 
 
 

@@ -44,6 +44,7 @@
           <div class="col-md-6">
             <iframe src="https://spotifycharts.com/regional/"  frameBorder="0">
             </iframe>
+          </div>
           <div class="col-md-6">
             <iframe src="https://spotifycharts.com/regional/"  frameBorder="0">
             </iframe>

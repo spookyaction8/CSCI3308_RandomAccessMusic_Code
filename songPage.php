@@ -75,7 +75,7 @@ $rowReview = pg_fetch_row($resultReview);
 
 ?>
 	<div class="container">
-		<img src="https://jarphotos.me/wp-content/themes/jarphoto/img/album.jpg" alt="album placeholder" style="float:left;width:250px;height:250px;"
+		<img src="https://jarphotos.me/wp-content/themes/jarphoto/img/album.jpg" alt="album placeholder" style="float:left;width:500px;height:500px;"
 		<br><br>
 		<h1><?php echo $rowSong[0]; ?></h1>
 			<br>

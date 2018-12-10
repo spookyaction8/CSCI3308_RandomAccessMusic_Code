@@ -75,7 +75,7 @@ $rowReview = pg_fetch_row($resultReview);
 
 ?>
 	<div class="container">
-		<img src="https://jarphotos.me/wp-content/themes/jarphoto/img/album.jpg" alt="album placeholder" style="float:left;width:500px;height:500px;"
+		<img src="https://jarphotos.me/wp-content/themes/jarphoto/img/album.jpg" alt="album placeholder" style="float:left;width:500px;height:500px;padding-top:20px"
 		<br><br>
 		<h1><?php echo $rowSong[0]; ?></h1>
 			<br>
@@ -84,7 +84,7 @@ $rowReview = pg_fetch_row($resultReview);
 		<h1><b><?php echo $rowSong[2]; ?></h1>
 		<h1><b>Average review score: </b><?php echo $rowSong[3]; ?>/5</h1>
 			<br><br><br><br><br><br><br><br><br>
-		<form action="/writeReview.php" class="btn btn-outline-success" style="float: auto;">Write a Review</button>
+		<form action="/writeReview.php" class="btn btn-outline-success" style="float:right;">Write a Review</button>
 
 
 

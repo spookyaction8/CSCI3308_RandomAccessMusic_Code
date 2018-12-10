@@ -57,7 +57,7 @@
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
     <div class="clearfix">
-      <a href="index.php" role="button" id="cancel" type="button" >Cancel</a>
+      <a href="index.php" role="button" id="cancel" type="button" style="color:red">Cancel</a>
       <button id="login" type="submit" class="signupbtn">Sign Up</button>
     </div>
   </div>

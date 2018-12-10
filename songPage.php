@@ -59,19 +59,19 @@ $search = $_GET['search'];
 $query = "SELECT SongName,SongArtist,SongAlbum,AvgRating,SongID,SongGenre FROM songdata WHERE songName='". $search . "'";
 $resultSong = pg_query($conn,$query);
 if (!$resultSong) {
-  echo "An error occurred.\n";
+  echo "An error occurred. Section 1\n";
   exit;
 }
 $query2 = "SELECT SID, rating, textreview, uid from reviews where SID='". $resultSong[4] . "'";
 $resultReview = pg_query($conn,$query2);
 if (!$resultReview) {
-  echo "An error occurred.\n";
+  echo "An error occurred. Section 2\n";
   exit;
 }
 $query3 = "SELECT username FROM accountdata where userid='". $resultReview[3] . "'";
 $resultAccount = pg_query($conn,$query3);
 if (!$resultAccount) {
-  echo "An error occurred.\n";
+  echo "An error occurred. Section 3\n";
   exit;
 }
 $rowSong = pg_fetch_row($resultSong);

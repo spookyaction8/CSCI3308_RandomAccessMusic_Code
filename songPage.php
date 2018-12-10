@@ -77,8 +77,10 @@ $rowReview = pg_fetch_row($resultReview);
 	<div class="container">
 		<br><br>
 		<h1 style="text-align:center;"><?php echo $rowSong[0]; ?></h1>
-			<p><i><?php echo $rowSong[1]; ?></p>
-			<p1><b><?php echo $rowSong[2]; ?></p1>
+			<br>
+			<p style="text-align:center;"><i><?php echo $rowSong[1]; ?></p>
+			<br>
+			<p1 style="text-align:center;"><b><?php echo $rowSong[2]; ?></p1>
 
 
 

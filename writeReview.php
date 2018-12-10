@@ -45,8 +45,7 @@ About page HTML
           </div>
 
     </nav>
-<?php
-
+    <?php
 
 // Create connection
 $conn = pg_connect(getenv("DATABASE_URL"));
@@ -56,7 +55,7 @@ if (!$conn) {
   exit;
 }
 $search = $_GET['search'];
-$query = "SELECT SongName,SongArtist,SongAlbum,AvgRating,SongID,SongGenre FROM songdata WHERE songName='". $search . "'";
+$query = "SELECT SongName,SongArtist,SongAlbum,SongID,SongGenre FROM songdata WHERE songName='". $search . "'";
 $resultSong = pg_query($conn,$query);
 if (!$resultSong) {
   echo "An error occurred.\n";
@@ -75,8 +74,9 @@ $rowSong = pg_fetch_row($resultSong);
 
 ?>
 
-  <h2 style="text-align:center;padding-top:10px;">Review: <?php echo $rowSong[0]; ?> by <?php echo $rowSong[1]; ?></h2>  
-		<div class="container" style="width:500px;height:250px;margin:auto;">
+  <h1><?php echo $rowSong[0]; ?></h1>
+  <!-- <h2 style="text-align:center;padding-top:10px;"> Review: <?php echo $rowSong[0]; ?> by <?php echo $rowSong[1]; ?></h2>   -->
+		<div class="container" style="width:750px;height:250px;margin:auto;">
           <!-- <br>
     			<form class = "form-horizontal" role ="form" style = "width: 100%">
   					<div class="form-group">

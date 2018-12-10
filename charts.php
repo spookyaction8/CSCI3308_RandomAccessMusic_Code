@@ -42,11 +42,11 @@
       <div class="link" style="overflow: hidden;">
         <div class="row">
           <div class="col-md-6">
-            <iframe src="https://spotifycharts.com/regional/"  frameBorder="0">
+            <iframe src="https://spotifycharts.com/regional/" width=100% height="450" frameBorder="0">
             </iframe>
           </div>
           <div class="col-md-6">
-            <iframe src="https://spotifycharts.com/regional/"  frameBorder="0">
+            <iframe src="https://spotifycharts.com/regional/" width=100% height="450" frameBorder="0">
             </iframe>
           </div>
         </div>

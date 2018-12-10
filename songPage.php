@@ -34,7 +34,7 @@ About page HTML
               <li class="nav-item" id="nav_ele">
                 <a class="nav-link" href="charts.php">Charts</a>
               </li>
-             
+
             </ul>
             <form action="/songPage.php" class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search for a song" aria-label="Search" name="search">
@@ -62,10 +62,10 @@ if (!$resultSong) {
   echo "An error occurred.\n";
   exit;
 }
-//$query2 = "SELECT SID, rating, textreview from reviews where SID='$resultSong[4]'";
-//$resultReview = pg_query($conn,$query2);
+$query2 = "SELECT SID, rating, textreview from reviews where SID='". $resultSong[4] . "'";
+$resultReview = pg_query($conn,$query2);
 $rowSong = pg_fetch_row($resultSong);
-//$rowReview = pg_fetch_row($resultReview);
+$rowReview = pg_fetch_row($resultReview);
 
 //$conn->close();
 
@@ -74,10 +74,13 @@ $rowSong = pg_fetch_row($resultSong);
 //echo "</h1>";
 
 ?>
+	<div class="container">
+		<br><br>
+		<h1 style="text-align:center;"><?php echo $rowSong[0]; ?></h1>
+			<p><i><?php echo $rowSong[1]; ?></p>
+			<p1><b><?php echo $rowSong[2]; ?></p1>
 
-	<h1><?php echo $rowSong[0]; ?></h1>
-	
-		
+
 
 
   </body>

@@ -56,12 +56,9 @@ if (!$conn) {
 
 $username_result = pg_query($conn, "SELECT userid FROM accountdata WHERE username = '$username'");
 
-$row = pg_num_rows($username_result);
+$row_count = pg_num_rows($username_result);
 
-echo $row;
-echo "<br>";
-echo $username_result;
-echo "<br>";
+
 
 if (!$username_result) {
   echo "An error occurred.\n";
@@ -71,6 +68,13 @@ if (!$username_result) {
 if($password != $password_rp)
 {
   echo "<p> Passwords do not match. </p>";
+}
+else if($row_count != 0)
+{
+  echo "<p> That username is already taken. </p>";
+}
+else{
+  pg_query($conn, "INSERT INTO accountdata(username, userpassword) VALUES ('$username', '$userpassword')";
 }
 
 

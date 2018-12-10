@@ -69,7 +69,7 @@ if($password != $password_rp)
 {
   echo "<p> Passwords do not match. </p>";
 }
-else if()
+
 
 
 

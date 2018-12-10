@@ -76,10 +76,10 @@ if (!$resultSong) {
   echo "An error occurred.\n";
   exit;
 }
-//$query2 = "SELECT SID, rating, textreview from reviews where SID='$resultSong[4]'";
-//$resultReview = pg_query($conn,$query2);
+$query2 = "SELECT SID, rating, textreview from reviews where SID='$resultSong[4]'";
+$resultReview = pg_query($conn,$query2);
 $rowSong = pg_fetch_row($resultSong);
-//$rowReview = pg_fetch_row($resultReview);
+$rowReview = pg_fetch_row($resultReview);
 
 //$conn->close();
 
@@ -89,7 +89,10 @@ $rowSong = pg_fetch_row($resultSong);
 
 ?>
 
-  <h1> <?php  echo $rowSong[0]; ?></h1>
+<div class="container">
+	<h><?php $rowSong[0] ?></h>
+	<p><i><?php $rowSong[1]?><br></i><?php $rowSong[2]?>
+		
 
 
   </body>

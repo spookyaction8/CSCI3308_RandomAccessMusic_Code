@@ -6,12 +6,6 @@ Write Review page CSS
 body {
 	background-color: #c0c1c4;
 }
-
-h1 {
-	color: black;
-	font-size: 36;
-	text-align: center;
-}
 #aboutDiv1 {
 	margin-top:10px;
 }

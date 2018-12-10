@@ -58,7 +58,10 @@ $username_result = pg_query($conn, "SELECT userid FROM accountdata WHERE usernam
 
 $row = pg_fetch_row($username_result);
 
-echo $row[0];
+echo $row;
+echo "<br>";
+echo $username;
+echo "<br>";
 
 if (!$username_result) {
   echo "An error occurred.\n";

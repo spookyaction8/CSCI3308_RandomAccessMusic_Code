@@ -83,7 +83,7 @@ $rowReview = pg_fetch_row($resultReview);
 		<h1><b><?php echo $rowSong[2]; ?></h1>
 		<h1><b>Average review score: </b><?php echo $rowSong[3]; ?>/5</h1>
 			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<form action="/writeReview.php" class="btn btn-outline-success" style="padding-left: 150px;padding-bottom: 20px">Write a Review</button>
+		<form action="/writeReview.php" class="btn btn-outline-success" style="padding-left: 300px;padding-bottom: 20px">Write a Review</button>
 
 
 

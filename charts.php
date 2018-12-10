@@ -43,19 +43,23 @@
         <div class="col-md-6">
           <h1> Global Charts </h1>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" >
           <h1> United States Charts </h1>
         </div>
       </div>
       <div class="link" style="overflow: hidden;">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-5">
             <iframe src="https://spotifycharts.com/regional/" width=100% height="900" frameBorder="0">
             </iframe>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-5">
             <iframe src="https://spotifycharts.com/regional/us/daily/latest" width=100% height="900" frameBorder="0">
             </iframe>
+          </div>
+          <div class="col-md-1">
           </div>
         </div>
 

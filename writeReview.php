@@ -54,7 +54,7 @@ if (!$conn) {
   echo "An error occurred.\n";
   exit;
 }
-$search = $_GET['search'];
+$search = $_GET['search'];//Need to name a value brought over by songPage
 $query = "SELECT SongName,SongArtist,SongAlbum,SongID,SongGenre FROM songdata WHERE songName='". $search . "'";
 $resultSong = pg_query($conn,$query);
 if (!$resultSong) {
@@ -73,9 +73,8 @@ $rowSong = pg_fetch_row($resultSong);
 //echo "</h1>";
 
 ?>
-
-  <h1><?php echo $rowSong[0]; ?></h1>
-  <!-- <h2 style="text-align:center;padding-top:10px;"> Review: <?php echo $rowSong[0]; ?> by <?php echo $rowSong[1]; ?></h2>   -->
+<br>
+  <h2 style="text-align:center;padding-top:10px;"> Review: <?php echo $rowSong[0]; ?> by, <?php echo $rowSong[1]; ?></h2>
 		<div class="container" style="width:750px;height:250px;margin:auto;">
           <!-- <br>
     			<form class = "form-horizontal" role ="form" style = "width: 100%">
@@ -143,7 +142,7 @@ $rowSong = pg_fetch_row($resultSong);
             <div class="form-group">
               <label for="userName"> <b> Username </b> </label>
               <input type="text" class="form-control-sm" id="userName" placeholder="Enter Username">
-              <label for="password"> <b> Password </b> </label>
+              <label for="password"> <b>    Password </b> </label>
               <input type="text" class="form-control-sm" id="password" placeholder="Enter Password">
   					</div>
 

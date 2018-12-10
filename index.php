@@ -34,19 +34,7 @@ index HTML
       				<li class="nav-item" id="nav_ele">
         				<a class="nav-link" href="charts.php">Charts</a>
       				</li>
-      				<!-- <li class="nav-item dropdown">
-       		 			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Explore Music </a>
-        				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-         					<a class="dropdown-item" href="#">Rock</a>
-          					<a class="dropdown-item" href="#">Hip-Hop</a>
-          					<a class="dropdown-item" href="#">Country</a>
-          					<a class="dropdown-item" href="#">Classical</a>
-          					<a class="dropdown-item" href="#">Jazz</a>
-          					<div class="dropdown-divider"></div>
-          					<a class="dropdown-item" href="#">Random Song</a>
-        				</div>
-      				</li> -->
-      			</ul>
+      		</ul>
       			<form action="/songPage.php" class="form-inline my-2 my-lg-0">
       				<input class="form-control mr-sm-2" type="search" placeholder="Search for a song" aria-label="Search" name="search">
       				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="nav_search">Search

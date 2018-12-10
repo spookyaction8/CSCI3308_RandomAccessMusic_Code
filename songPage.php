@@ -22,45 +22,31 @@ About page HTML
 
     <img src="finalrecord.gif" alt="gif" style="width:75px;height:75px;">
 
-        <a class="navbar-brand" href="homepage.html" style="color: yellow;"> Random Access Music </a>
-  			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    			<ul class="navbar-nav mr-auto">
-      				<li class="nav-item active" id="nav_ele">
-        				<a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
-     				</li>
-      				<li class="nav-item" id="nav_ele">
-        				<a class="nav-link" href="about.html">About</a>
-      				</li>
-      				<li class="nav-item" id="nav_ele">
-        				<a class="nav-link" href="charts.html">Charts</a>
-      				</li>
-      				<!-- <li class="nav-item dropdown">
-       		 			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Explore Music </a>
-        				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-         					<a class="dropdown-item" href="#">Rock</a>
-          					<a class="dropdown-item" href="#">Hip-Hop</a>
-          					<a class="dropdown-item" href="#">Country</a>
-          					<a class="dropdown-item" href="#">Classical</a>
-          					<a class="dropdown-item" href="#">Jazz</a>
-          					<div class="dropdown-divider"></div>
-          					<a class="dropdown-item" href="#">Random Song</a>
-        				</div>
-      				</li> -->
-      			</ul>
-      			<form class="form-inline my-2 my-lg-0">
-      				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="nav_search">Search
+        <a class="navbar-brand" href="index.php" style="color: yellow;"> Random Access Music </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active" id="nav_ele">
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+            </li>
+              <li class="nav-item" id="nav_ele">
+                <a class="nav-link" href="about.php">About</a>
+              </li>
+              <li class="nav-item" id="nav_ele">
+                <a class="nav-link" href="charts.php">Charts</a>
+              </li>
+             
+            </ul>
+            <form action="/songPage.php" class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search for a song" aria-label="Search" name="search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="nav_search">Search
               </button>
-							<a href="accountcreation.html" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" id="nav_login">Create an Account</a>
-   				 </form>
-      		</div>
+              <a href="accountcreation.php" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" id="nav_login">Create an Account</a>
+           </form>
+          </div>
 
-		</nav>
+    </nav>
     <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "myDB";
+
 
 // Create connection
 $conn = pg_connect(getenv("DATABASE_URL"));
@@ -89,9 +75,8 @@ $rowSong = pg_fetch_row($resultSong);
 
 ?>
 
-<div class="container">
-	<h><?php $rowSong[0] ?></h>
-	<p><i><?php $rowSong[1]?><br></i><?php $rowSong[2]?>
+	<h1><?php $rowSong[0] ?></h1>
+	
 		
 
 

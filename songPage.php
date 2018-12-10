@@ -62,10 +62,21 @@ if (!$resultSong) {
   echo "An error occurred.\n";
   exit;
 }
-$query2 = "SELECT SID, rating, textreview from reviews where SID='". $resultSong[4] . "'";
+$query2 = "SELECT SID, rating, textreview, uid from reviews where SID='". $resultSong[4] . "'";
 $resultReview = pg_query($conn,$query2);
+if (!$resultReview) {
+  echo "An error occurred.\n";
+  exit;
+}
+$query3 = "SELECT username FROM accountdata where userid='". $resultReview[3] . "'";
+$resultAccount = pg_query($conn,$query3);
+if (!$resultAccount) {
+  echo "An error occurred.\n";
+  exit;
+}
 $rowSong = pg_fetch_row($resultSong);
 $rowReview = pg_fetch_row($resultReview);
+$rowAccount = pg_fetch_row($resultAccount);
 
 //$conn->close();
 
@@ -85,52 +96,20 @@ $rowReview = pg_fetch_row($resultReview);
 		<h1><b>Average review score: </b><?php echo $rowSong[3]; ?>/5</h1>
 			<br><br><br><br><br><br><br><br><br>
 		<form action="/writeReview.php" class="btn btn-outline-success" style="float:right;">Write a Review</form>
-		<br><br>
+		<br><br><br><br><br><br><br>
 			<div class="container">
 		    <div class="row">
 		        <div class="col-sm-8">
 		            <div class="panel panel-white post panel-shadow">
 		                <div class="post-heading">
-		                    <div class="pull-left image">
-		                        <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
-		                    </div>
 		                    <div class="pull-left meta">
 		                        <div class="title h5">
-		                            <a href="#"><b>Ryan Haywood</b></a>
-		                            made a post.
+		                            <p><b><?php echo $rowAccount[0]?></b>'s review</p>
 		                        </div>
-		                        <h6 class="text-muted time">1 minute ago</h6>
 		                    </div>
 		                </div>
 		                <div class="post-description">
-		                    <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
-		                    <div class="stats">
-		                        <a href="#" class="btn btn-default stat-item">
-		                            <i class="fa fa-thumbs-up icon"></i>2
-		                        </a>
-		                        <a href="#" class="btn btn-default stat-item">
-		                            <i class="fa fa-thumbs-down icon"></i>12
-		                        </a>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col-sm-8">
-		            <div class="panel panel-white post panel-shadow">
-		                <div class="post-heading">
-		                    <div class="pull-left image">
-		                        <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
-		                    </div>
-		                    <div class="pull-left meta">
-		                        <div class="title h5">
-		                            <a href="#"><b>Ryan Haywood</b></a>
-		                            made a post.
-		                        </div>
-		                        <h6 class="text-muted time">1 minute ago</h6>
-		                    </div>
-		                </div>
-		                <div class="post-description">
-		                    <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
+		                    <p><?php echo $rowReview[2]?></p>
 		                    <div class="stats">
 		                        <a href="#" class="btn btn-default stat-item">
 		                            <i class="fa fa-thumbs-up icon"></i>2

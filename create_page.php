@@ -74,7 +74,7 @@ else if($row_count != 0)
   echo "<p> That username is already taken. </p>";
 }
 else{
-  pg_query($conn, "INSERT INTO accountdata(username, userpassword) VALUES ('$username', '$userpassword')";
+  pg_query($conn, "INSERT INTO accountdata(username, userpassword) VALUES ('$username', '$userpassword')");
 }
 
 

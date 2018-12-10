@@ -56,7 +56,7 @@ if (!$conn) {
 
 $username_result = pg_query($conn, "SELECT userid FROM accountdata WHERE username = '$username'");
 
-$row = pg_fetch_row($username_result);
+$row = pg_num_rows($username_result);
 
 echo $row;
 echo "<br>";

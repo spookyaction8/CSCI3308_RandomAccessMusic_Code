@@ -45,8 +45,37 @@ About page HTML
           </div>
 
     </nav>
-    <h2 style="text-align:center;padding-top:10px;"> Review *specific* song!</h2>
-    
+<?php
+
+
+// Create connection
+$conn = pg_connect(getenv("DATABASE_URL"));
+// Check connection
+if (!$conn) {
+  echo "An error occurred.\n";
+  exit;
+}
+$search = $_GET['search'];
+$query = "SELECT SongName,SongArtist,SongAlbum,AvgRating,SongID,SongGenre FROM songdata WHERE songName='". $search . "'";
+$resultSong = pg_query($conn,$query);
+if (!$resultSong) {
+  echo "An error occurred.\n";
+  exit;
+}
+//$query2 = "SELECT SID, rating, textreview from reviews where SID='$resultSong[4]'";
+//$resultReview = pg_query($conn,$query2);
+$rowSong = pg_fetch_row($resultSong);
+//$rowReview = pg_fetch_row($resultReview);
+
+//$conn->close();
+
+//echo "<h1>";
+//echo "STUPID HEAD";
+//echo "</h1>";
+
+?>
+
+  <h2 style="text-align:center;padding-top:10px;">Review: <?php echo $rowSong[0]; ?> by <?php echo $rowSong[1]; ?></h2>  
 		<div class="container" style="width:500px;height:250px;margin:auto;">
           <!-- <br>
     			<form class = "form-horizontal" role ="form" style = "width: 100%">

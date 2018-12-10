@@ -41,12 +41,12 @@
 
       <div class="link" style="overflow: hidden;">
         <div class="row">
-          <div class="col-md-6" style="padding-left: 10px;">
-            <iframe src="https://spotifycharts.com/regional/" width=100% height=100% frameBorder="0">
+          <div class="col-md-6" style="margin-left: 10px;">
+            <iframe src="https://spotifycharts.com/regional/" width=100% height="900" frameBorder="0">
             </iframe>
           </div>
-          <div class="col-md-6" style="padding-right: 10px;">
-            <iframe src="https://spotifycharts.com/regional/us/daily/latest" width=100% height=100% frameBorder="0">
+          <div class="col-md-6" style="margin-right: 10px;">
+            <iframe src="https://spotifycharts.com/regional/us/daily/latest" width=100% height="900" frameBorder="0">
             </iframe>
           </div>
         </div>

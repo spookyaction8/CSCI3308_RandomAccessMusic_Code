@@ -39,6 +39,14 @@
 
     </nav>
 
+      <div class="row">
+        <div class="col-md-6">
+          <h1> Global Charts </h1>
+        </div>
+        <div class="col-md-6">
+          <h1> United States Charts </h1>
+        </div>
+      </div>
       <div class="link" style="overflow: hidden;">
         <div class="row">
           <div class="col-md-6">

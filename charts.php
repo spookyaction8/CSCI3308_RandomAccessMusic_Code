@@ -18,13 +18,13 @@
         <a class="navbar-brand" href="index.php" style="color: yellow;"> Random Access Music </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-              <li class="nav-item active" id="nav_ele">
+              <li class="nav-item" id="nav_ele">
                 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
               <li class="nav-item" id="nav_ele">
                 <a class="nav-link" href="about.php">About</a>
               </li>
-              <li class="nav-item" id="nav_ele">
+              <li class="nav-item active" id="nav_ele">
                 <a class="nav-link" href="charts.php">Charts</a>
               </li>
              
@@ -42,10 +42,10 @@
       <div class="link" style="overflow: hidden;">
         <div class="row">
           <div class="col-md-6">
-            <iframe src="https://spotifycharts.com/regional/" width=100% height="450" frameBorder="0">
+            <iframe src="https://spotifycharts.com/regional/"  frameBorder="0">
             </iframe>
           <div class="col-md-6">
-            <iframe src="https://spotifycharts.com/regional/" width=100% height="450" frameBorder="0">
+            <iframe src="https://spotifycharts.com/regional/"  frameBorder="0">
             </iframe>
           </div>
         </div>

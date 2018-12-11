@@ -63,8 +63,8 @@ if (pg_num_rows($resultSong)==0) {
 	header('Location: http://csci3308-ram.herokuapp.com/songNotFound.php');
 	exit();
 }
-$query2 = "SELECT rating, textreview, uid from reviews where SID='". $resultSong[4]."' AND rating=MAX(rating);";
-$resultReview = pg_query($conn,$query2);
+$variableSong = $resultSong[4];
+$resultReview = pg_query($conn,"SELECT rating, textreview, uid from reviews where SID= '$variableSong' AND rating=MAX(rating)");
 if (!$resultReview) {
   echo "An error occurred. Section 2\n";
   exit;

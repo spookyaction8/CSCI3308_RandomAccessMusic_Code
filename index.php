@@ -99,7 +99,7 @@ index HTML
     <div class="container">
       <h2>Featured Artists</h2>
       <p><i><small>Top Artists This Week</small></i></p>
-      <div class="card-deck" style="width:1200px;height:500px;margin:auto;">
+      <div class="card-deck" style="width:1200px;height:500px;margin:auto;padding-bottom:15px;">
          <!--  took out card <div class="card">
             <img class="card-img-top" src="https://www.billboard.com/files/styles/article_main_image/public/media/lil-wayne-newark-nj-billboard-1548.jpg" alt="Lil Wayne">
             <div class="card-body">
@@ -116,7 +116,6 @@ index HTML
             <div class="card-body">
               <h4 class="card-title"><i>Lil Baby </i></h4>
               <p class="card-text">Having taken the latin hip-hop scene by storm, Lil Baby is running up the numbers in his genre.</p>
-              <a href="#" class="btn btn-primary">Artist Page</a>
             </div>
           </div>
           <div class="card">
@@ -124,7 +123,6 @@ index HTML
             <div class="card-body">
               <h4 class="card-title"><i>Joji</i></h4>
               <p class="card-text">Releasing single after single, Joji is prepping the Lo-Fi Hip-hop scene for the release of his new album.</p>
-              <a href="#" class="btn btn-primary">Artist Page</a>
             </div>
           </div>
           <div class="card">
@@ -132,7 +130,6 @@ index HTML
             <div class="card-body">
               <h4 class="card-title"><i>Portugal. The Man</i></h4>
               <p class="card-text">After being quiet since the release of their album,<i><b> Home of the Strange</b></i> back in 2016, the group have finally released their new project, <i><b>Mirror Master</b></i></p>
-              <a href="#" class="btn btn-primary">Artist Page</a>
             </div>
           </div>
 

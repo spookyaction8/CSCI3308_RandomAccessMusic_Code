@@ -64,7 +64,7 @@ if (pg_num_rows($resultSong)==0) {
 	exit();
 }
 $variableSong = $resultSong[4];
-$resultReview = pg_query($conn,"SELECT rating, textreview, uid from reviews where SID= '$variableSong' AND rating=MAX(rating)");
+$resultReview = pg_query($conn,"SELECT rating, textreview, uid FROM reviews WHERE SID=$variableSong AND rating=MAX(rating)");
 if (!$resultReview) {
   echo "An error occurred. Section 2\n";
   exit;

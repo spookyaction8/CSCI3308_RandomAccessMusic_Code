@@ -76,8 +76,8 @@ if (!$resultAccount) {
   exit;
 }
 $rowSong = pg_fetch_row($resultSong);
-//$rowReview = pg_fetch_row($resultReview);
-//$rowAccount = pg_fetch_row($resultAccount);
+$rowReview = pg_fetch_row($resultReview);
+$rowAccount = pg_fetch_row($resultAccount);
 
 //$conn->close();
 

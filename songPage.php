@@ -56,14 +56,14 @@ if (!$conn) {
   exit;
 }
 $search = $_GET['search'];
-$query = "SELECT SongName,SongArtist,SongAlbum,AvgRating,SongID,SongGenre FROM songdata WHERE songName='". $search . "'";
+$query = "SELECT SongName,SongArtist,SongAlbum,AvgRating,SongID,SongGenre FROM songdata WHERE songName='". $search ."'";
 $resultSong = pg_query($conn,$query);
 if ($resultSong[0] == '') {
   echo "An error occurred. Section 1\n";
 	header('Location: http://csci3308-ram.herokuapp.com/songNotFound.php');
 	exit();
 }
-/*$query2 = "SELECT SID, rating, textreview, uid from reviews where SID='". $resultSong[4] . "'";
+$query2 = "SELECT SID, rating, textreview, uid from reviews where SID='. $resultSong[4] '";
 $resultReview = pg_query($conn,$query2);
 if (!$resultReview) {
   echo "An error occurred. Section 2\n";
@@ -74,7 +74,7 @@ $resultAccount = pg_query($conn,$query3);
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";
   exit;
-}*/
+}
 $rowSong = pg_fetch_row($resultSong);
 //$rowReview = pg_fetch_row($resultReview);
 //$rowAccount = pg_fetch_row($resultAccount);

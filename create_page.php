@@ -87,7 +87,10 @@ else{
 
 <center> <?php echo $content; ?> </center>
 <br>
-<center> <button href="\index.php"> Home </button> </center>
+<center> 
+  <a href="accountcreation.php" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" >Back</a> 
+  <a href="index.php" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" >Home</a> 
+</center>
 <br>
 <br>
 

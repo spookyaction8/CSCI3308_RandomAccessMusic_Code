@@ -110,9 +110,9 @@ $rowReview = pg_fetch_row($resultReview);
 		                    </div>
 		                </div>
 		                <div class="post-description">
-		                    <p><?php echo $rowReview[1]?></p>
+		                    <p><?php echo $rowReview[1];?></p>
 		                    <div class="stats">
-														<p><?php echo $rowSong[3]?></p>
+														<p><?php echo $rowSong[3];?></p>
 		                        <a class="btn btn-default stat-item">
 		                            <i class="fa fa-thumbs-up icon"></i>
 		                        </a>

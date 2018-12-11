@@ -85,7 +85,7 @@ else{
 
 ?>
 
-<div class="create"> <?php echo $content; ?> </div>
+<center> <?php echo $content; ?> </center>
 <br>
 <br>
 

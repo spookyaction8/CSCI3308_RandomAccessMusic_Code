@@ -62,7 +62,7 @@ if (!$resultSong) {
   echo "An error occurred. Section 1\n";
   exit;
 }
-$query2 = "SELECT SID, rating, textreview, uid from reviews where SID='". $resultSong[4] . "'";
+/*$query2 = "SELECT SID, rating, textreview, uid from reviews where SID='". $resultSong[4] . "'";
 $resultReview = pg_query($conn,$query2);
 if (!$resultReview) {
   echo "An error occurred. Section 2\n";
@@ -73,10 +73,10 @@ $resultAccount = pg_query($conn,$query3);
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";
   exit;
-}
+}*/
 $rowSong = pg_fetch_row($resultSong);
-$rowReview = pg_fetch_row($resultReview);
-$rowAccount = pg_fetch_row($resultAccount);
+//$rowReview = pg_fetch_row($resultReview);
+//$rowAccount = pg_fetch_row($resultAccount);
 
 //$conn->close();
 

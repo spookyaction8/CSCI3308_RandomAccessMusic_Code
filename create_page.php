@@ -87,6 +87,8 @@ else{
 
 <center> <?php echo $content; ?> </center>
 <br>
+<center> <button href="\index.php"> Home </button> </center>
+<br>
 <br>
 
 

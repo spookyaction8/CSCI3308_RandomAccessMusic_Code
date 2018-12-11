@@ -69,14 +69,14 @@ if (!$resultReview) {
   echo "An error occurred. Section 2\n";
   exit;
 }
-$query3 = "SELECT username FROM accountdata where UID=$resultReview[2]";
+/*$query3 = "SELECT username FROM accountdata where UID=$resultReview[2]";
 $resultAccount = pg_query($conn,$query3);
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";
   exit;
 }
 $rowSong = pg_fetch_row($resultSong);
-$rowReview = pg_fetch_row($resultReview);
+$rowReview = pg_fetch_row($resultReview);*/
 $rowAccount = pg_fetch_row($resultAccount);
 
 //$conn->close();

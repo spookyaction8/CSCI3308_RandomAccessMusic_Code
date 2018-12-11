@@ -74,10 +74,10 @@ $resultAccount = pg_query($conn,$query3);
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";
   exit;
-}
+}*/
 $rowSong = pg_fetch_row($resultSong);
-$rowReview = pg_fetch_row($resultReview);*/
-$rowAccount = pg_fetch_row($resultAccount);
+$rowReview = pg_fetch_row($resultReview);
+//$rowAccount = pg_fetch_row($resultAccount);
 
 //$conn->close();
 

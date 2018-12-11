@@ -67,14 +67,15 @@ if (!$username_result) {
 
 if($password != $password_rp)
 {
-  echo "<p> Passwords do not match. </p>";
+  echo "<p class=\"create\"> Passwords do not match. </p>";
 }
 else if($row_count != 0)
 {
-  echo "<p> That username is already taken. </p>";
+  echo "<p class=\"create\"> That username is already taken. </p>";
 }
 else{
   pg_query($conn, "INSERT INTO accountdata(username, userpassword) VALUES ('$username', '$userpassword')");
+  echo "<p class=\"create\"> Account successfully created.</p>";
 }
 
 

@@ -23,3 +23,7 @@ Key Features:
 ● Up and Coming Artists (Extra Feature if we have time)
 
 We used html, css, bootstrap, php, postgres, heroku (for hosting), python (for automated testing) and c++.
+
+In this section, we have the code for everything we have deployed on heroku. There is also another section for our group's meeting notes: https://github.com/spookyaction8/CSCI3308_RandomAccessMusic_Notes as well as one for our milestones: https://github.com/spookyaction8/CSCI3308_RandomAccessMusic_Milestones/tree/master.
+
+We currently have this website hosted on heroku: https://csci3308-ram.herokuapp.com/, and by cloning this repository you can build this website right from your own browser (minus the databases). However our testing codes only test our databases. 

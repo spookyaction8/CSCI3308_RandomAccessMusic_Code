@@ -74,10 +74,10 @@ $resultAccount = pg_query($conn,$query3);
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";
   exit;
-}
+}*/
 $rowSong = pg_fetch_row($resultSong);
-$rowReview = pg_fetch_row($resultReview);*/
-$rowAccount = pg_fetch_row($resultAccount);
+$rowReview = pg_fetch_row($resultReview);
+//$rowAccount = pg_fetch_row($resultAccount);
 
 //$conn->close();
 
@@ -110,9 +110,9 @@ $rowAccount = pg_fetch_row($resultAccount);
 		                    </div>
 		                </div>
 		                <div class="post-description">
-		                    <p><?php echo $rowReview[2]?></p>
+		                    <p><?php echo $rowReview[1];?></p>
 		                    <div class="stats">
-														<p><?php echo $rowSong[3]?></p>
+														<p><?php echo $rowSong[3];?></p>
 		                        <a class="btn btn-default stat-item">
 		                            <i class="fa fa-thumbs-up icon"></i>
 		                        </a>

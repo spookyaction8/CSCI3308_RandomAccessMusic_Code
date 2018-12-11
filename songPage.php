@@ -56,27 +56,28 @@ if (!$conn) {
   exit;
 }
 $search = $_GET['search'];
-$query = "SELECT SongName,SongArtist,SongAlbum,AvgRating,SongID,SongGenre FROM songdata WHERE songName='". $search . "'";
+$query = "SELECT SongName,SongArtist,SongAlbum,AvgRating,SongID,SongGenre FROM songdata WHERE songName='". $search ."'";
 $resultSong = pg_query($conn,$query);
-if (!$resultSong) {
+if (pg_num_rows($resultSong)==0) {
   echo "An error occurred. Section 1\n";
-  exit;
+	header('Location: http://csci3308-ram.herokuapp.com/songNotFound.php');
+	exit();
 }
-/*$query2 = "SELECT SID, rating, textreview, uid from reviews where SID='". $resultSong[4] . "'";
-$resultReview = pg_query($conn,$query2);
+$variableSong = (int)$resultSong[4];
+$resultReview = pg_query($conn,"SELECT rating, textreview, uid FROM reviews WHERE (SID::INTEGER)=$variableSong");
 if (!$resultReview) {
   echo "An error occurred. Section 2\n";
   exit;
 }
-$query3 = "SELECT username FROM accountdata where userid='". $resultReview[3] . "'";
+/*$query3 = "SELECT username FROM accountdata where UID=$resultReview[2]";
 $resultAccount = pg_query($conn,$query3);
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";
   exit;
-}*/
+}
 $rowSong = pg_fetch_row($resultSong);
-//$rowReview = pg_fetch_row($resultReview);
-//$rowAccount = pg_fetch_row($resultAccount);
+$rowReview = pg_fetch_row($resultReview);*/
+$rowAccount = pg_fetch_row($resultAccount);
 
 //$conn->close();
 
@@ -97,7 +98,7 @@ $rowSong = pg_fetch_row($resultSong);
 			<br><br><br><br><br><br><br><br><br>
 		<form action="/writeReview.php" class="btn btn-outline-success" style="float:right;">Write a Review</form>
 		<br><br><br><br><br><br><br>
-			<div class="container">
+			<div class="container" style="padding-bottom:15px">
 		    <div class="row">
 		        <div class="col-sm-8">
 		            <div class="panel panel-white post panel-shadow">

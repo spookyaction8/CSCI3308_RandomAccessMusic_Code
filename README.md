@@ -4,7 +4,7 @@ Code for CSCI3308 group project
 Description:
 
 This is the code for Random Access Music which is a clean and sleek music platform. This allows users to discover other's opinions on 
-different songs. Our goal is to have a user maintained website, where users can discover new songs based off of what other people are 
+different songs in our database. Our goal is to have a user maintained website, where users can discover new songs based off of what other people are 
 listening to. Our platform will include features like general user reviews, for any user who creates an account with the site and music 
 will be rated on a five star system. Also, having a section for featured songs, albums, and artists of the week, and user-rated billboards.
 Reviews can be submitted by any user if there are no existing reviews for the album/song. This can be done possibly by using the Spotify API
@@ -24,6 +24,12 @@ Key Features:
 
 We used html, css, bootstrap, php, postgres, heroku (for hosting), python (for automated testing) and c++.
 
-In this section, we have the code for everything we have deployed on heroku. There is also another section for our group's meeting notes: https://github.com/spookyaction8/CSCI3308_RandomAccessMusic_Notes as well as one for our milestones: https://github.com/spookyaction8/CSCI3308_RandomAccessMusic_Milestones/tree/master.
+In this section, we have the code for everything we have deployed on heroku. 
 
-We currently have this website hosted on heroku: https://csci3308-ram.herokuapp.com/, and by cloning this repository you can build this website right from your own browser (minus the databases). However our testing codes only test our databases. 
+Our meeting notes can be found here: https://github.com/spookyaction8/CSCI3308_RandomAccessMusic_Notes 
+
+Our milestones can be found here: https://github.com/spookyaction8/CSCI3308_RandomAccessMusic_Milestones/tree/master.
+
+This website is currently hosted on heroku: https://csci3308-ram.herokuapp.com/, and by cloning this repository you can build this website right from your own browser without the databases. 
+
+The testing codes can only be used for testing our databases. 

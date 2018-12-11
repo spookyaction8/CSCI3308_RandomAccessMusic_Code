@@ -69,7 +69,7 @@ if (!$resultReview) {
   echo "An error occurred. Section 2\n";
   exit;
 }
-$query3 = "SELECT username FROM accountdata where userid='". $resultReview[3] . "'";
+$query3 = "SELECT username FROM accountdata where userid='$resultReview[3]'";
 $resultAccount = pg_query($conn,$query3);
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";
@@ -98,7 +98,7 @@ $rowSong = pg_fetch_row($resultSong);
 			<br><br><br><br><br><br><br><br><br>
 		<form action="/writeReview.php" class="btn btn-outline-success" style="float:right;">Write a Review</form>
 		<br><br><br><br><br><br><br>
-			<div class="container" style="">
+			<div class="container" style="padding-bottom:15px">
 		    <div class="row">
 		        <div class="col-sm-8">
 		            <div class="panel panel-white post panel-shadow">

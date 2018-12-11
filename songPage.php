@@ -111,11 +111,12 @@ $rowSong = pg_fetch_row($resultSong);
 		                <div class="post-description">
 		                    <p><?php echo $rowReview[2]?></p>
 		                    <div class="stats">
-		                        <a href="#" class="btn btn-default stat-item">
-		                            <i class="fa fa-thumbs-up icon"></i>2
+														<p><?php echo $rowSong[3]?></p>
+		                        <a class="btn btn-default stat-item">
+		                            <i class="fa fa-thumbs-up icon"></i>
 		                        </a>
-		                        <a href="#" class="btn btn-default stat-item">
-		                            <i class="fa fa-thumbs-down icon"></i>12
+		                        <a class="btn btn-default stat-item">
+		                            <i class="fa fa-thumbs-down icon"></i>
 		                        </a>
 		                    </div>
 		                </div>

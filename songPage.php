@@ -105,7 +105,7 @@ $rowReview = pg_fetch_row($resultReview);
 		                <div class="post-heading">
 		                    <div class="pull-left meta">
 		                        <div class="title h5">
-		                            <p><b><?php echo $rowAccount[0]?></b>'s review</p>
+		                            <p><b><?php echo $rowAccount[0];?></b>'s review</p>
 		                        </div>
 		                    </div>
 		                </div>

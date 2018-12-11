@@ -69,7 +69,7 @@ if (!$resultReview) {
   echo "An error occurred. Section 2\n";
   exit;
 }
-$query3 = "SELECT username FROM accountdata where userid='$resultReview[3]'";
+$query3 = "SELECT username FROM accountdata where userid='". $resultReview[3] ."'";
 $resultAccount = pg_query($conn,$query3);
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";

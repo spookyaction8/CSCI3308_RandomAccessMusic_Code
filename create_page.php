@@ -67,15 +67,15 @@ if (!$username_result) {
 
 if($password != $password_rp)
 {
-  echo "<div class=\"create\"> Passwords do not match. </div>";
+  $content =  "Passwords do not match.";
 }
 else if($row_count != 0)
 {
-  echo "<div class=\"create\"> That username is already taken. </div>";
+  $content = "That username is already taken.";
 }
 else{
   pg_query($conn, "INSERT INTO accountdata(username, userpassword) VALUES ('$username', '$userpassword')");
-  echo "<div class=\"create\"> Account successfully created.</div>";
+  $content = "Account successfully created.";
 }
 
 
@@ -84,6 +84,8 @@ else{
 
 
 ?>
+
+<div class="create"> <?php echo $content; ?> </div>
 <br>
 <br>
 

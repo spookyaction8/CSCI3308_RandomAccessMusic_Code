@@ -132,7 +132,7 @@ $rowSong = pg_fetch_row($resultSong);
                     </div>
                 </form>
             </div> -->
-            Enter Rating 1-5: <input type="number" min="0" step="1" max="5"/>
+            <label for="textreview"> <b> Rating 1-5:</b> </label> <input type="number" min="0" step="1" max="5"/>
             <br>
             <div class="form-group">
               <label for="textreview"> <b> Review </b> </label>

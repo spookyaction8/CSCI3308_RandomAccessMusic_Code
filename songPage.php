@@ -81,6 +81,7 @@ if (!$resultReview) {
 
 $variableReview = $rowReview[2];
 $query2 = "SELECT username FROM accountdata WHERE userid={$variableReview}";
+echo $query2;
 
 $resultAccount = pg_query($conn, $query2);
 if (!$resultAccount) {

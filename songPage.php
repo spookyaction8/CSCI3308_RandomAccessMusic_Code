@@ -59,7 +59,7 @@ $search = $_GET['search'];
 $query = "SELECT SongID,SongName,SongArtist FROM songdata WHERE songName='$search'";
 $resultSong = pg_query($conn,$query);
 $rowSong = pg_fetch_row($resultSong);
-echo $rowSong;
+echo $rowSong[0];
 
 
 if (pg_num_rows($resultSong)==0) {
@@ -75,7 +75,7 @@ $query = "SELECT rating, textreview, uid, totalVotes FROM reviews WHERE (SID::IN
 echo $query;
 $resultReview = pg_query($conn, $query);
 $rowReview = pg_fetch_row($resultReview);
-echo $rowReview;
+echo $rowReview[0];
 if (!$resultReview) {
   echo "An error occurred. Section 2\n";
   

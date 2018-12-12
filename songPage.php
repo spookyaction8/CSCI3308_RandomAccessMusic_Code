@@ -119,7 +119,7 @@ $rowAccount = pg_fetch_row($resultAccount);
 		                <div class="post-description">
 		                    <p><?php echo $rowReview[1];?></p>
 		                    <div class="stats">
-														<p><?php echo $rowReview[3];?></p>
+														<p><?php echo $rowReview[0];?> out of 5</p>
 		                        <a class="btn btn-default stat-item">
 		                            <i class="fa fa-thumbs-up icon"></i>
 		                        </a>

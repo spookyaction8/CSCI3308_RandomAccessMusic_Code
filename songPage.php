@@ -70,20 +70,20 @@ if (pg_num_rows($resultSong)==0) {
 
 $variableSong = $resultSong[0];
 
-
-$resultReview = pg_query($conn, "SELECT rating, textreview, uid, totalVotes FROM reviews WHERE (SID::INTEGER)={$variableSong}");
+$query = "SELECT rating, textreview, uid, totalVotes FROM reviews WHERE (SID::INTEGER)={$variableSong}";
+echo $query;
+$resultReview = pg_query($conn, $query);
 $rowReview = pg_fetch_row($resultReview);
 echo $rowReview;
 if (!$resultReview) {
   echo "An error occurred. Section 2\n";
-  exit;
+  
 }
 
 
 $resultAccount = pg_query($conn,"SELECT username FROM accountdata WHERE userid=$rowReview[2]");
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";
-  exit;
 }
 
 $rowAccount = pg_fetch_row($resultAccount);

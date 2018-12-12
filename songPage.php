@@ -64,7 +64,7 @@ if (pg_num_rows($resultSong)==0) {
 	header('Location: http://csci3308-ram.herokuapp.com/songNotFound.php');
 	exit();
 }
-$variableSong = (int)$resultSong[4];
+$variableSong = (int)$resultSong[3];
 $resultReview = pg_query($conn,"SELECT rating, textreview, uid FROM reviews WHERE (SID::INTEGER)=$variableSong");
 if (!$resultReview) {
   echo "An error occurred. Section 2\n";
@@ -97,7 +97,6 @@ echo $rowReview[0];
 			<br>
 		<h1><i><?php echo $rowSong[1]; ?></h1>
 			<br>
-		<h1><b><?php echo $rowSong[2]; ?></h1>
 		<h1><b>Average review score: </b><?php echo $rowReview[0]; ?>/5</h1>
 			<br><br><br><br><br><br><br><br><br>
 		<form action="/writeReview.php" class="btn btn-outline-success" style="float:right;">Write a Review</form>

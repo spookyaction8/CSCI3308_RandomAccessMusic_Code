@@ -102,7 +102,7 @@ $rowAccount = pg_fetch_row($resultAccount);
 			<br>
 		<h1><i><?php echo $rowSong[2]; ?></h1>
 			<br>
-		<h1><b>Average review score: </b><?php echo $rowSong[3]; ?>/5</h1>
+		<h1><b>Average review score: </b><?php echo round($rowSong[3], 2); ?>/5</h1>
 		
 		<br><br><br><br><br><br><br><br><br><br><br><br><br>
 			<div class="container" style="padding-bottom:15px">

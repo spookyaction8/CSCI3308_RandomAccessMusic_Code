@@ -47,7 +47,7 @@
   $rating = $_GET['rtng'];
   $username = $_GET['un'];
   $password = $_GET['pw'];
-  $review = $_GET['review'];
+  $review = $_GET['textreview'];
   $songName = $_COOKIE['song'];
 
   $conn = pg_connect(getenv("DATABASE_URL"));

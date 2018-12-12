@@ -79,16 +79,14 @@ if (!$resultReview) {
   
 }
 
-echo $rowReview[2];
+
 
 $variableReview = $rowReview[2];
 $query2 = "SELECT username FROM accountdata WHERE userid={$variableReview}";
-echo $query2;
+
 
 $resultAccount = pg_query($conn, $query2);
-if (!$resultAccount) {
-  echo "An error occurred. Section 3\n";
-}
+
 
 $rowAccount = pg_fetch_row($resultAccount);
 

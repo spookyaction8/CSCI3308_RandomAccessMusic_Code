@@ -78,14 +78,16 @@ if (!$resultReview) {
   echo "An error occurred. Section 2\n";
   exit;
 }
-/*$query3 = "SELECT username FROM accountdata where UID=$resultReview[2]";
+$query3 = "SELECT username FROM accountdata where UID=$resultReview[2]";
 $resultAccount = pg_query($conn,$query3);
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";
   exit;
-}*/
+}
 $rowReview = pg_fetch_row($resultReview);
-//$rowAccount = pg_fetch_row($resultAccount);
+$rowAccount = pg_fetch_row($resultAccount);
+
+
 // echo "this is where text should be ^^^^";
 echo $rowReview[0];
 // echo "int should be here";

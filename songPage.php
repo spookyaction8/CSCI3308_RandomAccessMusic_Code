@@ -59,6 +59,7 @@ $search = $_GET['search'];
 $query = "SELECT SongID,SongName,SongArtist FROM songdata WHERE songName='$search'";
 $resultSong = pg_query($conn,$query);
 $rowSong = pg_fetch_row($resultSong);
+echo $rowSong;
 
 
 if (pg_num_rows($resultSong)==0) {

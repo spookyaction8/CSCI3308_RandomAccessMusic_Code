@@ -132,18 +132,7 @@ index HTML
               <p class="card-text">After being quiet since the release of their album,<i><b> Home of the Strange</b></i> back in 2016, the group have finally released their new project, <i><b>Mirror Master</b></i></p>
             </div>
           </div>
-					<?php
-		      $conn = pg_connect(getenv("DATABASE_URL"));
-		      pg_query($conn,"INSERT INTO reviews VALUES (814,2,"In 2003, music videos still played in the morning on MTV and Outkast graced viewers with Hey Ya!. It was number 1 on the Hot 100 for 9 weeks from December 2003 - February 2004. It also won a Grammy for the Best Urban/Alternative Performance in 2004.
-Hey Ya! is an electrifying song that has a way of making your soul dance. Hey Ya! is probably best known for it's lyrics, "shake it like a polaroid picture". This song is fun, cheerful, lighthearted and can get anyone to dance. It's practically the perfect song to play at a wedding to get the attendees to start moving their hips. Whenever Hey Ya! is playing on the radio, one must turn it up.
-",5)");
-		      pg_query($conn,"INSERT INTO reviews VALUES (680,2,"Back in 2011, LMFAO had us shufflin' with their song Party Rock Anthem. When this song was first released, it was playing on ever pop and hip-hop radio station out there and was number one on the Billboard Hot 100 for 6 weeks in a row.
-Party Rock Anthem is the perfect dance song that can get an entire room moving, with an infective beat that will keep you shufflin the entire time. It's perfect for any party where you want to get the room dancing, kids parties too!",5)");
-					pg_query($conn,"INSERT INTO reviews VALUES (484,2,"Twisted Sister is one of the kings of 80's hair bands. I Wanna Rock happens to be one of their most popular songs, created in 1984. It has an excellent guitar riff, and a catchy yet powerful chorus that inspires the rebel within to put on their denim jackets and thrust their fist into the air. For any hard rock fan, I Wanna Rock is a classic.
-Though if you are not a fan of hard rock or specifically 80's hair bands, I Wanna Rock is probably not for you. More than eighty percent of the song lyrics are I want to Rock! (ROCK) sang the exact same way. Plus, the hard rock genre is not for everyone.
-Though, if you're into the 80's hard rock genre, it would be shocking if I Wanna Rock was not in your Spotify music list.",5)");
-					echo "This just ran";
-		    ?>
+					
 			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
    		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

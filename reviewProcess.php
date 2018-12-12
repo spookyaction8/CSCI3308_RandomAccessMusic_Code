@@ -67,6 +67,9 @@
 
   $UserID = $userRow[0];
 
+  echo $UserID;
+  echo "<br>";
+
   $UserPass = $userRow[1];
 
   
@@ -76,6 +79,8 @@
   else {
     $userRow = pg_fetch_row($userResult);
     $userID = $userRow[0];
+    echo $userID;
+    echo "<br>";
 
     $currentAvg = $songRow[2];
     $currentReviews = $songRow[1] + 1;

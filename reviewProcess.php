@@ -64,7 +64,7 @@
   $content = "Working";
   $userResult = pg_query($conn, "SELECT UserID FROM accountdata WHERE username='$username' AND password='$password'");
   if(!$userResult){
-    echo $username\t;
+    echo $username;
     echo $password;
     $content = "Account not found (Username or password incorrect). Please try again.";
   }

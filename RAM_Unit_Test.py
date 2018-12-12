@@ -9,7 +9,6 @@ db = None
 db_con = None
 db_conf = None
 
-
 def slurp(path):
 		with open(path, 'r') as f:
 			return f.read()

@@ -1,5 +1,5 @@
 # CSCI3308_RandomAccessMusic_Code
-Code for CSCI3308 group project
+*Code for CSCI3308 group project*
 
 **Description:**
 

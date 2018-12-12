@@ -56,7 +56,7 @@ if (!$conn) {
   exit;
 }
 $search = $_GET['search'];
-$query = "SELECT SongID,SongName,SongArtist FROM songdata WHERE songName='$search';
+$query = "SELECT SongID,SongName,SongArtist FROM songdata WHERE songName='$search'";
 $resultSong = pg_query($conn,$query);
 $rowSong = pg_fetch_row($resultSong);
 if (pg_num_rows($rowSong) > 0 ) {

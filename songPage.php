@@ -103,8 +103,7 @@ $rowAccount = pg_fetch_row($resultAccount);
 		<h1><i><?php echo $rowSong[2]; ?></h1>
 			<br>
 		<h1><b>Average review score: </b><?php echo $rowSong[3]; ?>/5</h1>
-			<br><br><br><br><br><br><br><br><br>
-		<a href="writeReview.php?search=<?php echo $search?>" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link"> Write A Review</a> 
+		
 		<br><br><br><br><br><br><br>
 			<div class="container" style="padding-bottom:15px">
 		    <div class="row">
@@ -130,6 +129,9 @@ $rowAccount = pg_fetch_row($resultAccount);
 		                    </div>
 		                </div>
 		            </div>
+		        </div>
+		        <div class="col-sm-4">
+		        	<center> <a href="writeReview.php?search=<?php echo $search?>" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" style="background-color: green;"> Write A Review</a> <center>
 		        </div>
 		    </div>
 		</div>

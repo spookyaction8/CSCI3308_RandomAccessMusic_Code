@@ -52,7 +52,7 @@
 
   $conn = pg_connect(getenv("DATABASE_URL"));
 
-  $songResult = pg_query($conn, "SELECT songid,ratingCount,AvgRating FROM songdata WHERE songname='$songName;");
+  $songResult = pg_query($conn, "SELECT songid,ratingCount,AvgRating FROM songdata WHERE songname='$songName';");
 
   $songRow = pg_fetch_row($songResult);
 

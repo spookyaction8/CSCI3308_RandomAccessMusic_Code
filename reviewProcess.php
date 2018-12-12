@@ -59,10 +59,13 @@
   $songID = $songRow[0];
 
   echo $songID;
+  echo "Test";
 
   $content = "Working";
   $userResult = pg_query($conn, "SELECT UserID FROM accountdata WHERE username='$username' AND password='$password'");
   if(!$userResult){
+    echo $username\t;
+    echo $password;
     $content = "Account not found (Username or password incorrect). Please try again.";
   }
   else {
@@ -82,7 +85,7 @@
   <center><b><?php echo $content?></b></center>
   <br>
   <center>
-    <a href="accountcreation.php" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" >Back</a>
+    <a href="writeReview.php?search=<?php echo $songName?>" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" >Back</a>
     <a href="index.php" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" >Home</a>
   </center>
 </body>

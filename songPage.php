@@ -87,13 +87,6 @@ if (!$resultAccount) {
 
 $rowAccount = pg_fetch_row($resultAccount);
 
-
-// echo "this is where text should be ^^^^";
-echo $rowReview[0];
-// echo "int should be here";
-
-//$conn->close();
-
 //echo "<h1>";
 //echo "STUPID HEAD";
 //echo "</h1>";

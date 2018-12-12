@@ -79,7 +79,7 @@
 
     $currentAvg = $songRow[2];
     $currentReviews = $songRow[1] + 1;
-    $totalVoteSum = $currentAvg*$currentReviews + $rating;
+    $totalVoteSum = $currentAvg*$songRow[1] + $rating;
     $newAverage = $totalVoteSum/$currentReviews;
 
     $query1 = "INSERT INTO reviews (SID,UID,rating,textreview,TotalVotes) VALUES ({$songID},{$userID},{$rating},'{$review}',1)";
@@ -87,7 +87,7 @@
     echo "new review effect: ";
     echo pg_affected_rows($newReview);
     echo "<br>";
-    $query2 = "UPDATE songdata SET AvgRating={$newAverage},ratingCount={$currentReviews} WHERE songID={$songID}";
+    $query2 = "UPDATE songdata SET AvgRating=0,ratingCount=0 WHERE songID={$songID}";
     $songReview = pg_query($conn, $query2);
     echo "song review effect: ";
     echo pg_affected_rows($songReview);

@@ -9,7 +9,7 @@ different songs in our database. Our goal is to have a user maintained website, 
 **Key Features:**
 - General user reviews
 - Billboards/ Charts
-- Rating scale (out of 5)
+- Rating scale (out of 5 stars)
 - Accounts (username, password)
 - Website
 - Featured albums, songs, artists
@@ -17,7 +17,7 @@ different songs in our database. Our goal is to have a user maintained website, 
 - Up and Coming Artists (Extra feature, for the future)
 
 
-Languages used were Html, CSS, Bootstrap, PHP, Postgres, C++, Heroku (for hosting), and Python (for automated testing).
+Languages used were Html, CSS, Bootstrap, PHP, PostgreSQL, C++, Heroku (for hosting), and Python (for automated testing).
 
 In this section, we have the code for everything we have deployed on heroku. 
 

@@ -78,7 +78,7 @@ if (!$resultAccount) {
 $rowSong = pg_fetch_row($resultSong);
 $rowReview = pg_fetch_row($resultReview);
 //$rowAccount = pg_fetch_row($resultAccount);
-echo $resultSong[2];
+echo $resultSong[1];
 // echo "this is where text should be ^^^^";
 // echo $rowReview[0];
 // echo "int should be here";

@@ -61,7 +61,7 @@
   echo $songID;
 
   $content = "Working";
-  $userResult = pg_query($conn, "SELECT UserID,password FROM accountdata WHERE username='$username'");
+  $userResult = pg_query($conn, "SELECT UserID, userpassword FROM accountdata WHERE username='$username'");
 
   $userRow = pg_fetch_row($userResult);
 

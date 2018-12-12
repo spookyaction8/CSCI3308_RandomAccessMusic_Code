@@ -58,7 +58,7 @@
 
   $songID = $songRow[0];
 
-  echo $songID;
+  
 
   $content = "Working";
   $userResult = pg_query($conn, "SELECT UserID, userpassword FROM accountdata WHERE username='$username'");
@@ -69,7 +69,7 @@
 
   $UserPass = $userRow[1];
 
-  echo $UserID;
+  
   if($UserPass != $password){
     $content = "Account not found (Username or password incorrect). Please try again.";
   }
@@ -82,10 +82,14 @@
     $totalVoteSum = $currentAvg*$currentReviews + $rating;
     $newAverage = $totalVoteSum/$currentReviews;
 
-    $newReview = pg_query($conn, "INSERT INTO reviews (SID,UID,rating,textreview,TotalVotes) values ($songID,$userID,$rating,'$review',1)");
+    $query1 = "INSERT INTO reviews (SID,UID,rating,textreview,TotalVotes) values ({$songID},{$userID},{$rating},'{$review}',1)";
+    $newReview = pg_query($conn, $query1);
+    echo "new review effect: "
     echo pg_affected_rows($newReview);
     echo "<br>";
-    $songReview = pg_query($conn, "UPDATE songdata SET AvgRating=$newAverage,ratingCount=$currentReviews WHERE songID=$songID");
+    $query2 = "UPDATE songdata SET AvgRating={$newAverage},ratingCount={$currentReviews} WHERE songID={$songID}";
+    $songReview = pg_query($conn, $query2);
+    echo "song review effect: "
     echo pg_affected_rows($songReview);
     echo "<br>";
 

@@ -103,7 +103,7 @@ $rowAccount = pg_fetch_row($resultAccount);
 			<br>
 		<h1><b>Average review score: </b><?php echo $rowReview[0]; ?>/5</h1>
 			<br><br><br><br><br><br><br><br><br>
-		<a href="writeReview.php?search=<?php echo $search?>" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link" style="float:right;" >Write A Review</a> 
+		<a href="writeReview.php?search=<?php echo $search?>" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link"> Write A Review</a> 
 		<br><br><br><br><br><br><br>
 			<div class="container" style="padding-bottom:15px">
 		    <div class="row">
@@ -112,7 +112,7 @@ $rowAccount = pg_fetch_row($resultAccount);
 		                <div class="post-heading">
 		                    <div class="pull-left meta">
 		                        <div class="title h5">
-		                            <p><b><?php echo $rowAccount[0];?></b>'s review</p>
+		                            <p>Review by <b><?php echo $rowAccount[0];?></b></p>
 		                        </div>
 		                    </div>
 		                </div>

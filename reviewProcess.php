@@ -83,7 +83,11 @@
     $newAverage = $totalVoteSum/$currentReviews;
 
     $newReview = pg_query($conn, "INSERT INTO reviews (SID,UID,rating,textreview,TotalVotes) values ($songID,$userID,$rating,'$review',1)");
+    echo pg_affected_rows($newReview);
+    echo "<br>";
     $songReview = pg_query($conn, "UPDATE songdata SET AvgRating=$newAverage,ratingCount=$currentReviews WHERE songID=$songID");
+    echo pg_affected_rows($songReview);
+    echo "<br>";
 
     $content = "Review Submitted.";
   }

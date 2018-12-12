@@ -59,7 +59,7 @@ $search = $_GET['search'];
 $query = "SELECT SongID,SongName,SongArtist FROM songdata WHERE songName='$search'";
 $resultSong = pg_query($conn,$query);
 $rowSong = pg_fetch_row($resultSong);
-if (pg_num_rows($rowSong) > 0 ) {
+if (pg_num_rows($resultSong) > 0 ) {
     // output data of each row
     for($i = 0; $i < pg_num_rows($rowSong); $i++) {
         echo "<br> id: " . $i . " - Element: ". $rowSong[$i];
@@ -72,7 +72,7 @@ if (pg_num_rows($resultSong)==0) {
 	header('Location: http://csci3308-ram.herokuapp.com/songNotFound.php');
 	exit();
 }
-$variableSong = (int)$resultSong[3];
+$variableSong = (int)$resultSong[0];
 $resultReview = pg_query($conn,"SELECT rating, textreview, uid, totalVotes FROM reviews WHERE (SID::INTEGER)=$variableSong");
 if (!$resultReview) {
   echo "An error occurred. Section 2\n";

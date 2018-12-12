@@ -56,7 +56,7 @@ if (!$conn) {
   exit;
 }
 $search = $_GET['search'];
-$query = "SELECT SongID,SongName,SongArtist FROM songdata WHERE songName='$search'";
+$query = "SELECT SongID,SongName,SongArtist, avgrating FROM songdata WHERE songName='$search'";
 $resultSong = pg_query($conn,$query);
 $rowSong = pg_fetch_row($resultSong);
 
@@ -102,7 +102,7 @@ $rowAccount = pg_fetch_row($resultAccount);
 			<br>
 		<h1><i><?php echo $rowSong[2]; ?></h1>
 			<br>
-		<h1><b>Average review score: </b><?php echo $rowReview[0]; ?>/5</h1>
+		<h1><b>Average review score: </b><?php echo $rowSong[3]; ?>/5</h1>
 			<br><br><br><br><br><br><br><br><br>
 		<a href="writeReview.php?search=<?php echo $search?>" class="btn btn-outline-success my-2 my-sm-0" role="button" type="nav-link"> Write A Review</a> 
 		<br><br><br><br><br><br><br>

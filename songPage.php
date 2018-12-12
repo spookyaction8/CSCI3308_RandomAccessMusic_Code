@@ -55,6 +55,7 @@ if (!$conn) {
 	echo "An error occurred.\n";
   exit;
 }
+echo pg_query($conn,"SELECT * FROM songdata");
 $search = $_GET['search'];
 $query = "SELECT SongID,SongName,SongArtist FROM songdata WHERE songName='". $search ."'";
 $resultSong = pg_query($conn,$query);

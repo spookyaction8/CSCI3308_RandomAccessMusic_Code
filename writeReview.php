@@ -55,12 +55,17 @@ if (!$conn) {
   exit;
 }
 $search = $_GET['search'];//Need to name a value brought over by songPage
+
+$_COOKIE['song'] = $search;
+
 $query = "SELECT SongName,SongArtist,SongAlbum,SongID,SongGenre FROM songdata WHERE songName='". $search . "'";
 $resultSong = pg_query($conn,$query);
 if (!$resultSong) {
   echo "An error occurred.\n";
   exit;
 }
+
+
 //$query2 = "SELECT SID, rating, textreview from reviews where SID='$resultSong[4]'";
 //$resultReview = pg_query($conn,$query2);
 $rowSong = pg_fetch_row($resultSong);
@@ -74,65 +79,11 @@ $rowSong = pg_fetch_row($resultSong);
 
 ?>
 <br>
-  <h2 style="text-align:center;padding-top:10px;"> Review: <?php echo $rowSong[0]; ?> by, <?php echo $rowSong[1]; ?></h2>
+  <h2 style="text-align:center;padding-top:10px;"> Review: <?php echo $rowSong[0]; ?> by <?php echo $rowSong[1]; ?></h2>
 		<div class="container" style="width:750px;height:250px;margin:auto;">
 			<form action="/reviewProcess.php" method="get">
-          <!-- <br>
-    			<form class = "form-horizontal" role ="form" style = "width: 100%">
-  					<div class="form-group">
-  						<label for="SongName"> <b> Song Title</b> </label>
-  						<div class = "col-med-10">
-                <input type="text" class="form-control" id="SongName" name = "SongName" placeholder="Enter song name" value = "" required>
-              </div>
-  					</div>
-            <div class="form-group">
-              <label for="SongArtist"> <b> Song Artist</b></label>
-              <div class = "col-med-10">
-                <input type="text" class="form-control" id="SongArtist" name = "SongArtist" placeholder="Enter song artist" value = "" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="SongAlbum"><b> Song Album</b></label>
-              <div class = "col-med-10">
-                <input type="text" class="form-control" id="SongAlbum" name = "SongAlbum" placeholder="Enter song album" value = "" required>
-              </div>
-            </div>
-            <div class = "button">
-              <label for="SongGenre"> <b> Song Genre</b></label>
-              <br>
-              <select id="SongGenre">
-                <option value ="">Choose an option</option>
-                <option value = "Alternative Rock">Alternative Rock</option>
-                <option value = "Country">Country</option>
-                <option value = "EDMDance">EDM Dance</option>
-                <option value = "Dubstep">Dub Step</option>
-                <option value = "Hard Rock">Hard Rock</option>
-                <option value = "HipHop">Hip Hop</option>
-                <option value = "LoFi">LoFi</option>
-                <option value = "Pop">Pop</option>
-                <option value = "Rap">Rap</option>
-              </select>
-            </div>
-            <br> -->
-            <!-- <label for="rating"> <b> Rating</b></label>
-           <div class="txt-center">
-                <form>
-                    <div class="rating">
-                        <input id="star5" name="star" type="radio" value="5" class="radio-btn hide" />
-                        <label for="star5">☆</label>
-                        <input id="star4" name="star" type="radio" value="4" class="radio-btn hide" />
-                        <label for="star4">☆</label>
-                        <input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
-                        <label for="star3">☆</label>
-                        <input id="star2" name="star" type="radio" value="2" class="radio-btn hide" />
-                        <label for="star2">☆</label>
-                        <input id="star1" name="star" type="radio" value="1" class="radio-btn hide" />
-                        <label for="star1">☆</label>
-                        <div class="clear"></div>
-                    </div>
-                </form>
-            </div> -->
-            <label for="textreview"> <b> Rating 1-5:</b> </label> <input type="number" min="0" step="1" max="5"/>
+         
+            <label for="textreview"> <b> Rating 1-5:</b> </label> <input type="number" min="0" step="1" max="5" name="rtng"/>
             <br>
             <div class="form-group">
               <label for="textreview"> <b> Review </b> </label>
@@ -143,12 +94,12 @@ $rowSong = pg_fetch_row($resultSong);
             <br>
             <div class="form-group">
               <label for="userName"> <b> Username </b> </label>
-              <input type="text" class="form-control-sm" id="userName" placeholder="Enter Username">
+              <input type="text" class="form-control-sm" id="userName" name="un" placeholder="Enter Username">
               <label for="password"> <b>    Password </b> </label>
-              <input type="text" class="form-control-sm" id="password" placeholder="Enter Password">
+              <input type="password" class="form-control-sm" id="password" name="pw" placeholder="Enter Password">
   					</div>
 
-  			 		<button type="submit" class="btn btn-success">Submit Review</button>
+  			 		<input type="submit" class="btn btn-primary">
 				</form>
 
     		</div>

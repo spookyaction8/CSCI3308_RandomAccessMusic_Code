@@ -34,7 +34,7 @@ About page HTML
               <li class="nav-item" id="nav_ele">
                 <a class="nav-link" href="charts.php">Charts</a>
               </li>
-             
+
             </ul>
             <form action="/songPage.php" class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search for a song" aria-label="Search" name="search">
@@ -76,6 +76,7 @@ $rowSong = pg_fetch_row($resultSong);
 <br>
   <h2 style="text-align:center;padding-top:10px;"> Review: <?php echo $rowSong[0]; ?> by, <?php echo $rowSong[1]; ?></h2>
 		<div class="container" style="width:750px;height:250px;margin:auto;">
+			<form action="/reviewProcess.php" method="get">
           <!-- <br>
     			<form class = "form-horizontal" role ="form" style = "width: 100%">
   					<div class="form-group">

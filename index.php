@@ -110,7 +110,7 @@ index HTML
             </div>
           </div> -->
           <iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp" width="300"
-		  height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+		  height="500" frameborder="0" allowtransparency="true" allow="encrypted-media" style="padding-bottom:15px"></iframe>
           <div class="card">
             <img class="card-img-top" src="https://ssle.ulximg.com/image/750x750/cover/1535058703_68d9b79e806ab354d0c2de0d79b46f9c.jpg/bb723a52a426398ac385ac3a486815cc/1535058703_d1b09792ad3ef8313df22d20a1d131fc.jpg" alt="Lil Baby">
             <div class="card-body">

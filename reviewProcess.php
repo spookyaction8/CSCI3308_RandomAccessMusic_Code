@@ -87,7 +87,7 @@
     echo "new review effect: ";
     echo pg_affected_rows($newReview);
     echo "<br>";
-    $query2 = "UPDATE songdata SET AvgRating={$newAverage},ratingCount={$totalVoteSum} WHERE songID={$songID}";
+    $query2 = "UPDATE songdata SET AvgRating=0,ratingCount=0 WHERE songID={$songID}";
     $songReview = pg_query($conn, $query2);
     echo "song review effect: ";
     echo pg_affected_rows($songReview);

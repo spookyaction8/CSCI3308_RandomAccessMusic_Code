@@ -104,7 +104,7 @@ $rowAccount = pg_fetch_row($resultAccount);
 			<br>
 		<h1><b>Average review score: </b><?php echo $rowSong[3]; ?>/5</h1>
 		
-		<br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br>
 			<div class="container" style="padding-bottom:15px">
 		    <div class="row">
 		        <div class="col-sm-8">

@@ -97,7 +97,7 @@ echo $rowReview[0];
 		<h1><i><?php echo $rowSong[1]; ?></h1>
 			<br>
 		<h1><b><?php echo $rowSong[2]; ?></h1>
-		<h1><b>Average review score: </b><?php echo $rowSong[3]; ?>/5</h1>
+		<h1><b>Average review score: </b><?php echo $rowReview[0]; ?>/5</h1>
 			<br><br><br><br><br><br><br><br><br>
 		<form action="/writeReview.php" class="btn btn-outline-success" style="float:right;">Write a Review</form>
 		<br><br><br><br><br><br><br>

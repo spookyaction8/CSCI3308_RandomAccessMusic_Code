@@ -9,7 +9,7 @@ different songs in our database. Our goal is to have a user maintained website, 
 **Key Features:**
 - General user reviews
 - Billboards/ Charts
-- Rating scale (out of 5)
+- Rating scale (out of 5 stars)
 - Accounts (username, password)
 - Website
 - Featured albums, songs, artists

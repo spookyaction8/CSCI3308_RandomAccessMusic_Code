@@ -61,7 +61,7 @@ $resultSong = pg_query($conn,$query);
 $rowSong = pg_fetch_row($resultSong);
 if (pg_num_rows($rowSong) > 0 ) {
     // output data of each row
-    for(int i = 0; i < pg_num_rows($rowSong), i++) {
+    for($i = 0; $i < pg_num_rows($rowSong), $i++) {
         echo "<br> id: ". i . " - Element: ". $row[i];
     }
 } else {

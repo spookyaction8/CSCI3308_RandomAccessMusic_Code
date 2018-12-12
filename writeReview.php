@@ -5,6 +5,11 @@ About page HTML
 
 -->
 
+<?php
+$search = $_GET['search'];//Need to name a value brought over by songPage
+$cookieName='song';
+setcookie($cookieName,$search,time()+240);
+?>
 <!doctype HTML>
 <html>
 	<head>
@@ -55,8 +60,8 @@ if (!$conn) {
   exit;
 }
 $search = $_GET['search'];//Need to name a value brought over by songPage
-
-$_COOKIE['song'] = $search;
+$cookieName='song';
+setcookie($cookieName,$search,time()+120);
 
 $query = "SELECT SongName,SongArtist,SongAlbum,SongID,SongGenre FROM songdata WHERE songName='". $search . "'";
 $resultSong = pg_query($conn,$query);
@@ -82,7 +87,7 @@ $rowSong = pg_fetch_row($resultSong);
   <h2 style="text-align:center;padding-top:10px;"> Review: <?php echo $rowSong[0]; ?> by <?php echo $rowSong[1]; ?></h2>
 		<div class="container" style="width:750px;height:250px;margin:auto;">
 			<form action="/reviewProcess.php" method="get">
-         
+
             <label for="textreview"> <b> Rating 1-5:</b> </label> <input type="number" min="0" step="1" max="5" name="rtng"/>
             <br>
             <div class="form-group">

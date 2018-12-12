@@ -61,8 +61,16 @@
   echo $songID;
 
   $content = "Working";
-  $userResult = pg_query($conn, "SELECT UserID FROM accountdata WHERE username='$username' AND password='$password'");
-  if(!$userResult){
+  $userResult = pg_query($conn, "SELECT UserID,password FROM accountdata WHERE username='$username'");
+
+  $userRow = pg_fetch_row($userResult);
+
+  $UserID = $userRow[0];
+
+  $UserPass = $userRow[1];
+
+  echo $UserID;
+  if($UserPass != $password){
     $content = "Account not found (Username or password incorrect). Please try again.";
   }
   else {
@@ -76,6 +84,8 @@
 
     $newReview = pg_query($conn, "INSERT INTO reviews (SID,UID,rating,textreview,TotalVotes) values ($songID,$userID,$rating,'$review',1)");
     $songReview = pg_query($conn, "UPDATE songdata SET AvgRating=$newAverage,ratingCount=$currentReviews WHERE songID=$songID");
+
+    $content = "Review Submitted.";
   }
   ?>
 

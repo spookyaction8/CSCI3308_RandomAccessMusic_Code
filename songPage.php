@@ -79,6 +79,8 @@ if (!$resultReview) {
   
 }
 
+echo $rowReview[2];
+
 $variableReview = $rowReview[2];
 $query2 = "SELECT username FROM accountdata WHERE userid={$variableReview}";
 echo $query2;

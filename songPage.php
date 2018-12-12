@@ -56,7 +56,7 @@ if (!$conn) {
   exit;
 }
 $search = $_GET['search'];
-$query = "SELECT SongName,SongArtist,AvgRating,SongID,SongGenre FROM songdata WHERE songName='". $search ."'";
+$query = "SELECT SongID,SongName,SongArtist FROM songdata WHERE songName='". $search ."'";
 $resultSong = pg_query($conn,$query);
 echo pg_num_rows($resultSong);
 if (pg_num_rows($resultSong)==0) {
@@ -65,7 +65,7 @@ if (pg_num_rows($resultSong)==0) {
 	exit();
 }
 $variableSong = (int)$resultSong[3];
-$resultReview = pg_query($conn,"SELECT rating, textreview, uid FROM reviews WHERE (SID::INTEGER)=$variableSong");
+$resultReview = pg_query($conn,"SELECT rating, textreview, uid, totalVotes FROM reviews WHERE (SID::INTEGER)=$variableSong");
 if (!$resultReview) {
   echo "An error occurred. Section 2\n";
   exit;
@@ -93,9 +93,9 @@ echo $rowReview[0];
 	<div class="container">
 		<img src="https://jarphotos.me/wp-content/themes/jarphoto/img/album.jpg" alt="album placeholder" style="float:left;width:500px;height:500px;padding-top:20px"
 		<br><br>
-		<h1><?php echo $rowSong[0]; ?></h1>
+		<h1><?php echo $rowSong[1]; ?></h1>
 			<br>
-		<h1><i><?php echo $rowSong[1]; ?></h1>
+		<h1><i><?php echo $rowSong[2]; ?></h1>
 			<br>
 		<h1><b>Average review score: </b><?php echo $rowReview[0]; ?>/5</h1>
 			<br><br><br><br><br><br><br><br><br>
@@ -115,7 +115,7 @@ echo $rowReview[0];
 		                <div class="post-description">
 		                    <p><?php echo $rowReview[1];?></p>
 		                    <div class="stats">
-														<p><?php echo $rowSong[3];?></p>
+														<p><?php echo $rowReview[3];?></p>
 		                        <a class="btn btn-default stat-item">
 		                            <i class="fa fa-thumbs-up icon"></i>
 		                        </a>

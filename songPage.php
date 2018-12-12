@@ -71,6 +71,8 @@ if (pg_num_rows($resultSong)==0) {
 $variableSong = $resultSong[0];
 
 $query = "SELECT rating, textreview, uid, totalVotes FROM reviews WHERE (SID::INTEGER)=" . $variableSong;
+echo $query;
+echo "<br>";
 
 $resultReview = pg_query($conn, $query);
 $rowReview = pg_fetch_row($resultReview);

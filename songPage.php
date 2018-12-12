@@ -85,7 +85,7 @@ if (!$resultReview) {
 }
 
 
-$resultAccount = pg_query($conn,"SELECT username FROM accountdata WHERE UID=1");
+$resultAccount = pg_query($conn,"SELECT username FROM accountdata WHERE userid=$rowReview[2]");
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";
   exit;

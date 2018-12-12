@@ -58,7 +58,7 @@ if (!$conn) {
 $search = $_GET['search'];
 $query = "SELECT SongName,SongArtist,SongAlbum,AvgRating,SongID,SongGenre FROM songdata WHERE songName='". $search ."'";
 $resultSong = pg_query($conn,$query);
-echo pg_num_rows($resultSong)==0;
+echo pg_num_rows($resultSong);
 if (pg_num_rows($resultSong)==0) {
   echo "An error occurred. Section 1\n";
 	header('Location: http://csci3308-ram.herokuapp.com/songNotFound.php');

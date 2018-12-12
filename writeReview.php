@@ -148,7 +148,7 @@ $rowSong = pg_fetch_row($resultSong);
               <input type="text" class="form-control-sm" id="password" placeholder="Enter Password">
   					</div>
 
-  			 		<input type="submit" class="btn btn-primary">
+  			 		<button type="submit" class="btn btn-success">Submit Review</button>
 				</form>
 
     		</div>

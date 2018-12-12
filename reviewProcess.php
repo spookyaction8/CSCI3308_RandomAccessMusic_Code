@@ -87,7 +87,7 @@
     $totalVoteSum = $currentAvg*$songRow[1] + $rating;
     $newAverage = $totalVoteSum/$currentReviews;
 
-    $query1 = "INSERT INTO reviews (SID,UID,rating,textreview,TotalVotes) VALUES ({$songID},{$UserID},'$rating',{$review},1)";
+    $query1 = "INSERT INTO reviews (SID,UID,rating,textreview,TotalVotes) VALUES ({$songID},{$UserID},{$rating},'$review',1)";
     echo $query1;
     echo "<br>";
     $newReview = pg_query($conn, $query1);

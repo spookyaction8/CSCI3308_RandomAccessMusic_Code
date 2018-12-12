@@ -72,15 +72,20 @@ if (pg_num_rows($resultSong)==0) {
 	header('Location: http://csci3308-ram.herokuapp.com/songNotFound.php');
 	exit();
 }
+
+
 $variableSong = (int)$resultSong[0];
-$resultReview = pg_query($conn,"SELECT rating, textreview, uid, totalVotes FROM reviews WHERE (SID::INTEGER)=$variableSong");
+
+
+$resultReview = pg_query($conn,"SELECT rating, textreview, uid, totalVotes FROM reviews WHERE (SID::INTEGER)=1");
 $rowReview = pg_fetch_row($resultReview);
 if (!$resultReview) {
   echo "An error occurred. Section 2\n";
   exit;
 }
-$query3 = "SELECT username FROM accountdata where UID=$rowReview[2]";
-$resultAccount = pg_query($conn,$query3);
+
+
+$resultAccount = pg_query($conn,"SELECT username FROM accountdata WHERE UID=1");
 if (!$resultAccount) {
   echo "An error occurred. Section 3\n";
   exit;

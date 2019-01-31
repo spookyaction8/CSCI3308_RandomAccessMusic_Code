@@ -1,0 +1,26 @@
+/*
+
+Random Access Music
+Homepage CSS
+
+*/
+
+body {
+	background-color: #c0c1c4;
+}
+
+.carousel-inner img {
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+}
+
+#carouselHeader {
+	text-align: center;
+	border-top: solid white 2px;
+	border-bottom: solid white 2px;
+}
+
+#carouselEdge {
+
+}
